@@ -1,0 +1,38 @@
+.swiper-pagination-bullet{
+    padding: map-get($spacers, 2 );
+    margin: map-get($spacers, 2 );
+    background: rgba($black, 0.5) !important;
+    &:focus{
+        outline: unset;
+    }
+}
+.swiper-pagination-bullet-active{
+  background: $green !important;
+}
+.swiper-pagination{
+    margin-top: map-get($spacers, 3 );
+    position: unset !important;
+    text-align: center;
+}
+
+.swiper-image{
+   width: 23.125 rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .swiper-image {
+    width: 18rem;
+  }
+} 
+
+@include media-breakpoint-up(xl) {
+  .swiper-image {
+    width: 25rem;
+  }
+} 
+
+@include media-breakpoint-up(xxl) {
+  .swiper-image {
+    width: 23rem;
+  }
+}  

@@ -1,0 +1,23 @@
+// Tabs
+//
+
+
+.clickr-tabs {
+  border-bottom:0;
+
+  .nav-link {
+    border: 2px solid transparent;
+    color:$gray-600;
+    font-weight: 700;
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    border-bottom-color: $primary;
+    color:$primary;
+  }
+}

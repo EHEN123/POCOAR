@@ -1,0 +1,31 @@
+append variables
+  -
+    var items = [
+      {
+        image:'services-shoe-blue.png',
+        imageOrder:'order-0',
+        bg: 'bg-soft-primary',
+        btnTextColor: 'text-primary',
+        title:'Photo Preview',
+        titleColor:'text-primary',
+        text:'Invest on your commercial product photography on a visual story created by our creative team. Each click at the most reasonable price going to pay you more.'
+      },
+      {
+        image:'services-shoe-green.png',
+        imageOrder:'order-lg-1',
+        bg: 'bg-soft-success',
+        btnTextColor: 'text-success',
+        title:'Product Revision',
+        titleColor:'text-success',
+        text:"It's not just another edge correcting service. A team trusted by more than 5,000 brands will work at your product with care and creativity.", 
+      },
+        
+    ]
+
+mixin Services
+  +Section.bg-light.py-5#services
+    .row
+      h1.text-center.lh-sm.mb-5.fs-lg-6.fs-xxl-7 Our Services
+      .col-12 
+        +ServicesCard(items[0])  
+        +ServicesCard(items[1])  

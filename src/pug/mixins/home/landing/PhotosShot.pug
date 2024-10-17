@@ -1,0 +1,237 @@
+append variables
+	-
+		var category= [
+			{
+				image:'food-1.png',
+			},
+			{
+				image:'food-2.png',
+
+			},
+
+			{
+				image:'food-3.png',
+
+			},
+			{
+				image:'food-4.png',
+
+			},
+			{
+				image:'food-5.png',
+
+			},
+			{
+				image:'food-6.png',
+
+			},
+			{
+				image:'shoes-1.png',
+
+			},
+			{
+				image:'shoes-2.png',
+
+			},
+			{
+				image:'shoes-3.png',
+
+			},
+			{
+				image:'shoes-4.png',
+
+			},
+			{
+				image:'shoes-5.png',
+
+			},
+			{
+				image:'shoes-6.png',
+
+			},
+			{
+				image:'watch-1.png',
+			},
+			{
+				image:'watch-2.png',
+
+			},
+
+			{
+				image:'watch-3.png',
+
+			},
+			{
+				image:'watch-4.png',
+
+			},
+			{
+				image:'watch-5.png',
+
+			},
+			{
+				image:'watch-6.png',
+
+			},
+			{
+				image:'cosmetics-1.png',
+			},
+			{
+				image:'cosmetics-2.png',
+
+			},
+
+			{
+				image:'cosmetics-3.png',
+
+			},
+			{
+				image:'cosmetics-4.png',
+
+			},
+			{
+				image:'cosmetics-5.png',
+
+			},
+			{
+				image:'cosmetics-6.png',
+
+			},
+			{
+				image:'phone-1.png',
+			},
+			{
+				image:'phone-2.png',
+
+			},
+
+			{
+				image:'phone-3.png',
+
+			},
+			{
+				image:'phone-4.png',
+
+			},
+			{
+				image:'phone-5.png',
+
+			},
+			{
+				image:'phone-6.png',
+
+			},
+			{
+				image:'camera-1.png',
+			},
+			{
+				image:'camera-2.png',
+
+			},
+
+			{
+				image:'camera-3.png',
+
+			},
+			{
+				image:'camera-4.png',
+
+			},
+			{
+				image:'camera-5.png',
+
+			},
+			{
+				image:'camera-6.png',
+
+			},
+		];
+mixin PhotoItems(config)
+	.col-sm-6.col-md-4.mb-3.h-100
+		.card.card-span.h-100.text-white
+			img.rounded-3(src=`${CWD}assets/img/gallery/${config.image}` alt='...').h-100
+			a.stretched-link(href='#!')
+
+mixin PhotosShot
+	section
+		.container
+			.row.h-100
+				.col-lg-7.mx-auto.text-center.mb-6
+					h1.text-center.lh-sm.fs-lg-6.fs-xxl-7 Over 1,00,000 Photos Shot
+
+				.col-12
+					nav
+					.nav.nav-tabs.clickr-tabs.mb-6.justify-content-center#nav-tab(role='tablist')
+						button.nav-link.active#nav-food-tab(data-bs-toggle='tab' data-bs-target='#nav-food' type='button' role='tab' aria-controls='nav-food' aria-selected='true') Food
+						button.nav-link#nav-shoes-tab(data-bs-toggle='tab' data-bs-target='#nav-shoes' type='button' role='tab' aria-controls='nav-shoes' aria-selected='false') Shoes
+						button.nav-link#nav-watches-tab(data-bs-toggle='tab' data-bs-target='#nav-watches' type='button' role='tab' aria-controls='nav-watches' aria-selected='false') Watches
+						button.nav-link#nav-cosmetics-tab(data-bs-toggle='tab' data-bs-target='#nav-cosmetics' type='button' role='tab' aria-controls='nav-cosmetics' aria-selected='false') Cosmetics
+						button.nav-link#nav-phone-tab(data-bs-toggle='tab' data-bs-target='#nav-phone' type='button' role='tab' aria-controls='nav-phone' aria-selected='false') Phone
+						button.nav-link#nav-camera-tab(data-bs-toggle='tab' data-bs-target='#nav-camera' type='button' role='tab' aria-controls='nav-camera' aria-selected='false') Camera
+				.tab-content#nav-tabContent
+					.tab-pane.fade.show.active#nav-food(role='tabpanel' aria-labelledby='nav-food-tab') 
+						.row.gx-3
+							+PhotoItems(category[0])
+							+PhotoItems(category[1])
+							+PhotoItems(category[2])
+							+PhotoItems(category[3])
+							+PhotoItems(category[4])
+							+PhotoItems(category[5])
+							.col-12.d-flex.justify-content-center.mt-5                                            
+								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
+									i.fas.fa-arrow-right.ms-2
+					.tab-pane.fade#nav-shoes(role='tabpanel' aria-labelledby='nav-shoes-tab') 
+						.row.gx-3
+							+PhotoItems(category[6])
+							+PhotoItems(category[7])
+							+PhotoItems(category[8])
+							+PhotoItems(category[9])
+							+PhotoItems(category[10])
+							+PhotoItems(category[11])
+							.col-12.d-flex.justify-content-center.mt-5                                            
+								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
+									i.fas.fa-arrow-right.ms-2
+					.tab-pane.fade#nav-watches(role='tabpanel' aria-labelledby='nav-watches-tab')
+						.row.gx-3
+							+PhotoItems(category[12])
+							+PhotoItems(category[13])
+							+PhotoItems(category[14])
+							+PhotoItems(category[15])
+							+PhotoItems(category[16])
+							+PhotoItems(category[17])
+							.col-12.d-flex.justify-content-center.mt-5                                            
+								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
+									i.fas.fa-arrow-right.ms-2
+					.tab-pane.fade#nav-cosmetics(role='tabpanel' aria-labelledby='nav-cosmetics-tab') 
+						.row.gx-3
+							+PhotoItems(category[18])
+							+PhotoItems(category[19])
+							+PhotoItems(category[20])
+							+PhotoItems(category[21])
+							+PhotoItems(category[22])
+							+PhotoItems(category[23])
+							.col-12.d-flex.justify-content-center.mt-5                                            
+								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
+									i.fas.fa-arrow-right.ms-2
+					.tab-pane.fade#nav-phone(role='tabpanel' aria-labelledby='nav-phone-tab')
+						.row.gx-3
+							+PhotoItems(category[24])
+							+PhotoItems(category[25])
+							+PhotoItems(category[26])
+							+PhotoItems(category[27])
+							+PhotoItems(category[28])
+							+PhotoItems(category[29])
+							.col-12.d-flex.justify-content-center.mt-5                                            
+								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
+									i.fas.fa-arrow-right.ms-2
+					.tab-pane.fade#nav-camera(role='tabpanel' aria-labelledby='nav-camera-tab') 
+						.row.gx-3
+							+PhotoItems(category[30])
+							+PhotoItems(category[31])
+							+PhotoItems(category[32])
+							+PhotoItems(category[33])
+							+PhotoItems(category[34])
+							+PhotoItems(category[35])
+							.col-12.d-flex.justify-content-center.mt-5                                            
+								a.btn.btn-lg.btn-outline-warning.rounded-pill(href='#!') View portfolio
+									i.fas.fa-arrow-right.ms-2

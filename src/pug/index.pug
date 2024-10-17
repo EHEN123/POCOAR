@@ -1,0 +1,42 @@
+extends layouts/LayoutTheme
+include mixins/common/ServicesCard
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Brands
+include mixins/home/landing/HowItHappens
+include mixins/home/landing/Testimonial
+include mixins/home/landing/PricingTable
+include mixins/home/landing/PhotosShot
+include mixins/home/landing/Services
+include mixins/home/landing/Faq
+include mixins/home/landing/Cta
+include mixins/home/landing/Footer
+
+
+
+append variables
+ 
+  - var currentPage = 3;
+  -
+    var attrsBody = {
+        'data-bs-spy':"scroll",
+        'data-bs-target':"#navbar"
+    }
+
+
+append styles
+    link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`,rel='stylesheet') 
+
+prepend scripts
+    script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+  
+append content
+  +HeroHeader({id: 'pagination1'})
+  +Brands
+  +HowItHappens
+  +Testimonials
+  +Pricing
+  +PhotosShot
+  +Services
+  +Faqs
+  +Cta
+  +Footer

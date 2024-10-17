@@ -1,0 +1,61 @@
+append variables
+  -
+    var testimonials= [
+      {
+        
+        image:'testimonial-image-1.png',
+        title:'When it comes to both reliability and quality, <span class="text-primary">ClickR</span> is undoubtly one of best services out there. Team was fast and responsible. 5 stars for them!',
+        name: 'Andrinna Malin',
+        designation : 'Designer, co-Founder at Nirvana Tech',
+      },
+      {
+        image:'testimonial-image-2.png',
+        title:'When it comes to both reliability and quality,  <span class="text-primary">ClickR</span> is undoubtly one of best services out there. Team was fast and responsible. 5 stars for them!',
+        name: 'Ainara Vergara,',
+        designation : 'Designer',
+      },
+      {
+        image:'testimonial-image-3.png',
+        title:'When it comes to both reliability and quality,  <span class="text-primary">ClickR</span> is undoubtly one of best services out there. Team was fast and responsible. 5 stars for them!',
+        name: 'Niek Bove,',
+        designation :'Senior Developer',
+      },
+    ];
+mixin Testimonial(config)
+  .col-md-4.col-lg-5.col-xl-4.text-center.order-1.d-none.d-md-block
+    .wrapper.square.shadow-square-top
+      .h-100
+        img.rounded-3.mt-4(src=`${CWD}assets/img/gallery/${config.image}` alt="testimonials" width='325')
+  .col-md-4.col-lg-5.col-xl-6.d-block.d-md-none.order-1
+    img.rounded-pill(src=`${CWD}assets/img/gallery/${config.image}` alt="testimonials" width='100')
+  .col-md-6.col-lg-6.col-xl-5.mb-4
+    img.img-fluid(src=`${CWD}assets/img/gallery/quotation.png` alt="testimonials-bg")
+    h2.my-5!=config.title 
+    h6.text-700.fs-lg-0.mb-0!=config.name
+    p.fw-normal.text-700.fs--1=config.designation 
+      
+
+mixin Testimonials
+  section.pb-7.pt-5#testimonial
+    .container-xxl
+      .row.flex-center.h-100
+        .col-12
+          #carouselTestimonials.carousel.slide(data-bs-ride='carousel')
+            .carousel-inner.ps-sm-4.ps-md-4.pb-5.pb-md-2.pb-lg-0
+              .carousel-item.active(data-bs-interval='10000')
+                .row.h-100.align-items-center.justify-content-around                
+                  +Testimonial(testimonials[0])                                                                    
+              .carousel-item(data-bs-interval='5000')
+                .row.h-100.align-items-center.justify-content-around                
+                  +Testimonial(testimonials[1])                    
+              .carousel-item(data-bs-interval='3000')
+                .row.h-100.align-items-center.justify-content-around                                  
+                  +Testimonial(testimonials[2])                                                        
+            .row.flex-center.ps-5.ps-md-6.ps-lg-7
+              .col-12.position-relative
+                a.carousel-control-prev.carousel-icon.z-index-2(href='#carouselTestimonials' style="left:-1.9rem;" role='button' data-bs-slide='prev' )
+                  span.carousel-control-prev-icon(aria-hidden='true')
+                  span.visually-hidden Previous
+                a.carousel-control-next.carousel-icon.z-index-2(href='#carouselTestimonials' role='button' data-bs-slide='next' style="right:auto;")
+                  span.carousel-control-next-icon(aria-hidden='true')
+                  span.visually-hidden Next

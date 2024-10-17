@@ -1,0 +1,56 @@
+block append variables
+  -
+    var faqs = [
+      {
+        title   :`What's the turnabout time?`,
+        titleTextColor:`text-primary`,
+        description: `Generally the turnabout time depends on the scheme of pricing you are selecting. The tentative turnaround time for orders less than 100 images is up to 12 business days from the time we receive your products and payment. Reach our support to get better insight.`,
+      },
+      {
+        title:'What are the delivery options?',
+        titleTextColor:`text-success`,
+        description: `Deliver your products by using the labeling with the help of any courier service or just drop it at our door step at the Biancca Studio, San Francisco.`,
+      },
+      {
+        title: 'Will my products be returned?',
+        titleTextColor:`text-warning`,
+        description: `That’s totally up to you. If you want the product back, then you have to include that option in registration time. Else, it will be stored in our storage and you can pick that whenever you wish.`,
+      },
+      {
+        title: `Can I provide references?`,
+        titleTextColor:`text-warning`,
+        description: `Absolutely! If clients provide any sort of refernces, that is highly appreciated by our creative team.`,
+      },
+      {
+        title: `Can I be present during the shoot?`,
+        titleTextColor:`text-primary`,
+        description: `Sorry, we currently do not support that under any pricing scheme. Usually any other person than the creative team is not allowed to attend the phototshoot. Otherwise, it has effects on others and time & effort get wasted as we conduct the process on a fixed plan. We hope that people would understand and respect our creative process.`,
+      },
+      {
+        title: `Do you support revisions?`,
+        titleTextColor:`text-success`,
+        description: `Yes, based on the pricing plan, you will have several revision options. If you want to bring more than 90% change, then you will have to pay further.`
+      },
+     
+    ]; 
+
+mixin FaqAltItem(config)
+  h3.mb-3(class=`${config.titleTextColor}`)=config.title
+  p.mb-5=config.description
+
+mixin Faqs(config)
+  +Section#faqs
+    .row
+      h1.text-center.lh-sm.mb-5.fs-lg-6.fs-xxl-7 FAQ
+      .col-12
+        .card
+          .card-body.px-5.pb-0
+            .row.gx-8
+              .col-lg-6
+                each faq in faqs.slice(0, Math.floor(faqs.length / 2) )
+                  +FaqAltItem(faq)
+              .col-lg-6
+                each faq in faqs.slice(Math.floor(faqs.length / 2) )
+                  +FaqAltItem(faq)
+
+          

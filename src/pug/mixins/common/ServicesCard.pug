@@ -1,0 +1,16 @@
+mixin ServicesCard(config)
+	.card.mb-3.hover-top-shadow.rounded-3.py-3(class=`${config.bg}`)
+		.row.g-0.flex-center
+			.col-md-5.col-lg-4.text-center(class=`${config.imageOrder}`)
+				img.text-center.w-100(src=`${CWD}assets/img/gallery/${config.image}`  alt='...')
+			.col-md-7.col-lg-8
+				.card-body.ps-5.p-lg-8
+					h2.card-title.mb-4(class=`${config.titleColor}`)!=config.title
+					p.card-text.mb-4.fs-1.pe-xxl-8!=config.text
+					.d-flex.flex-row
+						a.btn.px-0.me-3(href='#!' class=`${config.btnTextColor}`) View portfolio
+							i.fas.fa-arrow-right.ms-2
+						
+						a.btn(href='#!' class=`${config.btnTextColor}`) Pricing
+							i.fas.fa-arrow-right.hvr-icon-forward.ms-2
+							

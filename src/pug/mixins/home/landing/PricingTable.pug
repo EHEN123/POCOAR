@@ -1,0 +1,36 @@
+mixin PriceItem(config, ...items)
+  .col-md-4.pt-6.px-sm-7.px-md-2.px-lg-3
+    .card.h-100.rounded-3(class=`${config.bg}`)
+      +Background({ image: `${CWD}assets/img/gallery/${config.bgimage}`, attrs: { style: { 'background-position': 'top right', 'background-size': 'auto',} }, className: 'rounded-3' })
+      .card-body.z-index-2
+        .ms-4
+          h5.my-4.text-800=config.title
+          h1.fs-7.text(class=`${config.textColor}`)= config.footerTitle
+          h6.fs--1.mb-6(class=`${config.textColor}`) / per image
+          ul.list-unstyled
+            each item in items      
+              li.mb-3.text-900
+                i.fas.fa-check-circle.text-700.me-2
+                =item 
+        .my-5.text-center
+          if config.hasBtnOutlinePrimary
+            button.btn.btn-lg.btn-outline-primary.rounded-pill(type='button') Choose plan
+          else if config.hasBtnOutlineSuccess
+            button.btn.btn-lg.btn-outline-success.rounded-pill(type='button') Choose plan  
+          else
+            button.btn.btn-lg.btn-warning.hover-top.btn-glow.rounded-pill.border-0(type='button') Choose plan
+
+mixin Pricing
+  +Section('container-lg').bg-100.py-7#packages
+    .row.justify-content-center
+      .col-12 
+        h1.text-center.lh-sm.fs-lg-6.fs-xxl-7 Our Packages
+    .row.h-100.justify-content-center
+
+      - const p1 = {title:'Basic', image: 'pricing.png',bg:'bg-soft-primary',bgimage:'pricing-primary.png', footerTitle:'$9',textColor:'text-primary',hasBtnOutlinePrimary: true}
+      - const p2 = {title:'Professional', image: 'pricing.png',bg:'bg-soft-success',bgimage:'pricing-success.png' ,footerTitle: '$19',textColor:'text-success', hasBtnOutlineSuccess: true }  
+      - const p3 = {title:'Avarage', image: 'pricing.png',bg:'bg-soft-warning',bgimage:'pricing-warning.png',footerTitle:'$29',textColor:'text-warning' ,hasBtnOutline: false}
+
+      +PriceItem(p1, 'High quality images ', 'Single Revision', '10 Products per order','Not providing softcopy','Free return shipment')
+      +PriceItem(p3, 'High quality images ', '5 Revisions', '25 Products per order','Provides softcopy & PSD','Free return shipment')
+      +PriceItem(p2, 'High quality images ', '3 Revisions', '50 Products per order','Provides softcopy','Free return shipment')

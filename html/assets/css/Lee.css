@@ -1,0 +1,489 @@
+/* ============= custom ============= */
+
+body{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    color: #333;
+}
+
+
+.Lbtn {
+  color: #333 !important;
+  background-color: #fff !important;
+  border: 3px solid #333 !important; 
+  transition: background 0.5s ease;
+  font-weight: bold;
+}
+
+.Lbtn:hover {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+
+
+
+body {
+  cursor: url('https://raw.githubusercontent.com/EHEN123/boot5/954eb51965a5bdb23614679ab7c82235f42bafd0/cursor.svg'), auto; /* 기본 커서 */
+}
+
+a, button, .clickable, .nav-link {
+  cursor: url('https://raw.githubusercontent.com/EHEN123/boot5/954eb51965a5bdb23614679ab7c82235f42bafd0/cursor_hover.svg'), pointer !important;
+}
+
+.custom-cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none; /* 클릭 방지 */
+  transition: transform 0.1s ease; /* 부드러운 이동 */
+  z-index: 100000;
+  background-image: url('https://raw.githubusercontent.com/EHEN123/boot5/bd89f112e99188b4f0d0cf86cf2a4c05c0621e68/cursor_FW.svg'); /* 초기 SVG */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cursor-animation {
+  position: absolute;
+  pointer-events: none; /* 마우스 이벤트 무시 */
+  animation: cursorGrow 0.5s forwards; /* 커서 크기 증가 애니메이션 */
+}
+
+.cursor-shrink {
+  animation: cursorShrink 0.5s forwards; /* 커서 크기 감소 애니메이션 */
+}
+
+
+
+.blur-target {
+  transition: filter 0.5s ease;
+  /* 블러 효과 애니메이션 */
+}
+
+.blur-target:hover {
+  filter: blur(5px);
+  /* 호버 시 블러 효과 */
+  transition: transform 1s;
+  transition: filter 0.5s;
+  /* 블러 효과 애니메이션 */
+}
+
+
+/* ============= topBtn ============= */
+
+
+.topBtn {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none; /* 링크 밑줄 제거 */
+  z-index: 9;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.topText {
+  position: absolute;
+  color: #555; /* 텍스트 색상 */
+  font-size: 14px; /* 폰트 크기 설정 */
+  font-weight: bold;
+  z-index: 10;
+}
+
+#POCOAR_c{
+  fill: #555;
+  transition: transform 10s ease;
+}
+.topBtn:hover {
+  #POCOAR_c{
+  animation: spin 10s linear infinite;
+  }
+}@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.topBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.1); /* 반투명 배경 */
+  border-radius: 50%; /* 원형 */
+  transform: translate(-50%, -50%); /* 중앙 정렬 */
+  backdrop-filter: blur(10px); /* 배경 블러 효과 */
+  filter: blur(5px);
+  z-index: -1; /* 버튼 텍스트 위에 위치하도록 */
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+  opacity: 0; /* 초기 상태에서 보이지 않도록 설정 */
+}
+
+.topBtn:hover::before {
+  opacity: 1; /* 호버 시 나타나도록 설정 */
+}
+
+
+
+
+/* ============= nav ============= */
+
+.navbar {
+  border: 3px solid #000;
+  background-color: #fff;
+  backdrop-filter: 10px !important;
+  border-radius: 100px;
+  
+  &.bg-light {
+    border-radius: 50px !important;
+
+    ul{
+      text-align: right;
+      padding: 0 3rem 1rem;
+    }
+  }
+}
+
+.search,
+.mypage,
+.bag {
+  opacity: 1;
+  transition: opacity 0.5s; 
+}
+.search:hover,
+.mypage:hover,
+.bag:hover {
+  opacity: 0.7;
+}
+
+  
+/* .mainBanner {
+  height: 800px !important;
+} */
+
+.logo {
+  max-width: 150px;
+}
+
+.form a img {
+  width: 20px;
+  height: 20px;
+}
+
+.navBtn{
+  border: none !important;
+}
+
+.main{
+  overflow: hidden;
+}
+
+
+
+/* ============= main ============= */
+
+/* ============= pc ============= */
+
+
+.box01 .mainIcon {
+  width: auto;
+  min-width: 80px;
+  transition: transform 3s ease-in-out;
+}
+
+.box01 .mainIcon:hover {
+  animation: spin 3s linear infinite; /* 애니메이션 적용 */
+}
+
+
+
+.box01 .thin{
+  font-weight: lighter;
+}
+.box01 .black{
+  font-weight: 900;
+}
+.box01 .line{
+  background-image: url('data:image/svg+xml;utf8,<svg width="5" height="4" viewBox="0 0 5 4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2H5" stroke="black" stroke-width="3"/></svg>');
+
+  background-repeat: repeat-x;
+  background-size: auto;
+
+  height: 4px;
+  width: 100%;
+}
+
+.box01 .text01{
+  flex: 0 1 auto;
+  white-space: nowrap; 
+}
+
+.box01 .button{
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+}
+
+.box02{
+  /* background-color: lightgray; */
+  border-radius: 1.25rem;
+}
+
+.loofText{
+  height: 50px !important;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative; 
+}
+
+.Ltext {
+  font-size: 24px;
+  font-style: italic;
+  color: #333;
+  display: inline-block;
+  padding-right: 10px;
+  animation: scroll 20s linear infinite; /* 애니메이션 적용 */
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0); /* 시작 위치 */
+  }
+  100% {
+      transform: translateX(-100%); /* 전체 길이 만큼 이동 */
+  }
+}
+
+.slide{
+  margin-top: 10px !important;
+}
+
+
+@media (min-width:992px) {
+  .navbar-nav {
+    display: block;
+  }
+}
+
+
+/* ============= mobile ============= */
+/* 3개 슬라이드반응형 */
+
+@media (min-width:768px) {
+  .pcVisual{
+    display: unset;
+  }
+  .box02{
+    margin-left: 0px !important;
+  }
+}
+
+.box02 {
+  position: relative;
+  width: 100%; 
+  height: auto; 
+  overflow: hidden; 
+}
+
+.box02 video {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+
+.mdVisual{
+  height: auto;
+}
+
+.visualImg{
+  border-radius: 1.25rem;
+}
+
+
+
+
+/* ============= c01 ============= */
+
+#aboutUs .c01text *{
+  color: #fff !important;
+  text-align: center;
+}
+#aboutUs p{
+  padding: 0;
+  margin: 0;
+}
+
+.star img{
+  width: 10px;
+  height: 10px;
+}
+
+
+.c01text br{
+  display: block;
+}
+.pt{
+  margin-top: 10px !important;
+}
+
+@media (min-width:700px){
+  .c01text br{
+    display: none;
+  }
+  .pt{
+    margin-top: 0 !important;
+  }
+}
+@media (min-width: 992px) {
+  #aboutUs {
+      margin-top: 7.5rem !important;
+  }
+}
+
+.fadeIn {
+  opacity: 0; /* 초기 상태: 투명함 */
+  transform: translateY(20px); /* 초기 위치: 아래로 이동 */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 설정 */
+}
+
+.fadeIn.visible {
+  opacity: 1; /* 서서히 나타남 */
+  transform: translateY(0); /* 원래 위치로 돌아옴 */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ============= c03 ============= */
+
+
+#map, .Classform{
+  border: 3px solid #333;
+  border-radius: 1.25rem;
+}
+
+#map{
+  height: 300px;
+}
+
+.Classform{
+  background: #fff;
+}
+.box03Img{
+  height: 300px;
+  background: gray;
+  margin-bottom: 30px;
+  border-radius: 1.25rem;
+}
+
+
+.Classform div, .Classform span{
+  color: #333;
+  font-weight: 500;
+}
+
+.Classform{
+  height: 100% !important;
+}
+
+.classform_form{
+  padding: 30px;
+  height: 100%;
+}
+
+
+.classform_form p{
+  font-size: 15px;
+  color: #aaa;
+  font-weight: normal;
+  margin: 0;
+}
+
+.classType button:not(.category-btn){
+  margin-right: 20px;
+}
+
+.classform_form .input,
+.classform_form .option,
+.classform_form .date,
+.category-btn{
+  width: 12vw;
+  min-width: 150px;
+  height: 40px;
+  border: 3px solid #333;
+  border-radius: 100px;
+  padding: 0 15px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.category-btn{
+  background: #fff;
+  width: 120px;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.category-btn.active{
+  background: #333;
+  color: #fff;
+}
+
+.sumbit{
+  width: 100%;
+  background: #333;
+  height: 50px;
+  color: #fff;
+  border-radius: 100px;
+
+}
+
+/* form 미디어쿼리(모바일) */
+@media (max-width:992px){
+  .classform_form .input{
+    width: 100% !important;
+  }
+
+  
+}
+
+
+/* ============= footer ============= */
+
+
+.business{
+  font-size: 12px;
+}
+
+.footerSns a svg{
+  width: 30px;
+}

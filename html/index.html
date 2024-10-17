@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- ===============================================-->
+  <!--  font  -->
+  <!-- ===============================================-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+
+  <!-- ===============================================-->
+  <!--    Document Title-->
+  <!-- ===============================================-->
+  <title>POCO:AR</title>
+
+
+  <!-- ===============================================-->
+  <!--    Favicons-->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/icon_180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/icon_32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/icon_32.ico">
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/icons/icon.ico"> -->
+  <!-- 앱 -->
+  <!-- <link rel="manifest" href="assets/img/favicons/manifest.json"> -->
+  <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->
+  <link href="assets/css/Lee.css" rel="stylesheet" />
+  <link href="assets/css/theme.css" rel="stylesheet" />
+  <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+  <!-- 앱 키(지도) -->
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aa6143908ca57c34f40da9e9563b1d46"></script>
+
+
+  <!-- ===============================================-->
+  <!-- jQuery -->
+  <!-- ===============================================-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+  <!-- ===============================================-->
+  <!--    TOP   -->
+  <!-- ===============================================-->
+
+  <a class="topBtn d-none d-xl-flex position-fixed bottom-0 end-0" href="#">
+
+    <span class="topText">TOP</span>
+
+    <svg version="1.1" id="POCOAR_c" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px" y="0px" viewBox="0 0 65 65" style="enable-background:new 0 0 65 65;" xml:space="preserve">
+      <text transform="matrix(1 0 0 1 382.9389 158.5871)"
+        style="font-family:'MyriadPro-Regular'; font-size:12px;">POCOAR </text>
+      <g>
+        <path d="M13.4,6.3c0.3-0.2,0.6-0.5,1.1-0.8C15,5.1,15.6,5,16,5c0.4,0.1,0.8,0.3,1,0.7c0.3,0.4,0.4,0.8,0.3,1.2
+     c-0.1,0.5-0.5,1-1.1,1.4c-0.2,0.1-0.3,0.2-0.5,0.3l1.2,1.8l-0.6,0.4L13.4,6.3z M15.4,8.1c0.1-0.1,0.3-0.1,0.5-0.3
+     c0.7-0.5,0.9-1.1,0.5-1.7c-0.4-0.6-1-0.6-1.7-0.2c-0.3,0.2-0.4,0.3-0.5,0.4L15.4,8.1z" />
+        <path d="M22.9,4.2c0.7,1.7,0.1,3.1-1.2,3.6c-1.3,0.6-2.7,0-3.3-1.6c-0.7-1.6-0.2-3.1,1.2-3.6C21,2,22.3,2.7,22.9,4.2z M19.1,5.9
+     c0.5,1.1,1.5,1.8,2.5,1.3c1-0.4,1.2-1.6,0.7-2.8c-0.4-1-1.4-1.8-2.5-1.3C18.7,3.6,18.6,4.9,19.1,5.9z" />
+        <path d="M28.4,5.5C28.1,5.7,27.7,6,27,6.1c-1.5,0.3-2.8-0.3-3.2-2.1c-0.4-1.7,0.5-3,2.1-3.4c0.7-0.2,1.1-0.1,1.3-0.1l0,0.6
+     c-0.3-0.1-0.7-0.1-1.1,0c-1.2,0.3-1.9,1.3-1.6,2.7c0.3,1.3,1.2,2,2.5,1.7c0.4-0.1,0.8-0.3,1.1-0.5L28.4,5.5z" />
+        <path d="M33.3,2.6c0.1,1.9-1,2.9-2.4,3c-1.4,0.1-2.5-1-2.6-2.6c-0.1-1.7,0.9-2.9,2.4-3C32.2-0.1,33.2,1,33.3,2.6z M29.1,2.9
+     C29.2,4.1,29.9,5.1,31,5c1.1-0.1,1.7-1.1,1.6-2.4c-0.1-1.1-0.7-2.2-1.9-2.1C29.6,0.6,29.1,1.7,29.1,2.9z" />
+        <path d="M35.2,3.9l-0.8,1.6l-0.7-0.1l2.5-5.2L37,0.3L38.2,6l-0.7-0.1l-0.4-1.8L35.2,3.9z M37,3.6l-0.3-1.6c-0.1-0.4-0.1-0.7-0.2-1
+     l0,0c-0.1,0.3-0.2,0.6-0.4,0.9l-0.7,1.5L37,3.6z" />
+        <path d="M40.2,1c0.4,0,0.9,0.1,1.3,0.3c0.7,0.2,1.1,0.5,1.4,0.9c0.2,0.3,0.2,0.7,0.1,1.1c-0.2,0.7-0.8,1-1.4,1l0,0
+     C42,4.6,42.2,5,42.1,5.6c0,0.8-0.1,1.3,0,1.6l-0.7-0.2c0-0.2,0-0.7,0-1.4c0.1-0.8-0.1-1.1-0.7-1.3l-0.6-0.2l-0.7,2.3l-0.7-0.2
+     L40.2,1z M40.2,3.6l0.7,0.2c0.7,0.2,1.3,0,1.5-0.6c0.2-0.7-0.2-1.1-0.9-1.3c-0.3-0.1-0.6-0.1-0.7-0.1L40.2,3.6z" />
+        <path d="M51.8,6.4c0.3,0.2,0.7,0.4,1.1,0.8c0.5,0.4,0.8,0.9,0.9,1.3c0.1,0.4,0,0.8-0.3,1.2c-0.3,0.4-0.7,0.6-1.1,0.6
+     c-0.5,0.1-1.1-0.2-1.7-0.6c-0.2-0.1-0.3-0.3-0.4-0.4L48.9,11l-0.5-0.4L51.8,6.4z M50.6,8.9c0.1,0.1,0.2,0.3,0.4,0.4
+     c0.7,0.5,1.3,0.5,1.8,0c0.5-0.6,0.3-1.1-0.3-1.6c-0.2-0.2-0.4-0.3-0.5-0.4L50.6,8.9z" />
+        <path
+          d="M56.6,14.8c-1.4,1.2-2.9,1-3.8,0c-0.9-1.1-0.8-2.6,0.5-3.7c1.3-1.1,2.9-1.1,3.8,0C58.1,12.3,57.9,13.8,56.6,14.8z
+      M53.8,11.7c-0.9,0.8-1.3,1.9-0.5,2.8c0.7,0.8,1.9,0.6,2.9-0.2c0.8-0.7,1.3-1.9,0.5-2.8C55.9,10.6,54.7,10.9,53.8,11.7z" />
+        <path d="M57,20.4c-0.2-0.2-0.6-0.5-1-1.1c-0.8-1.3-0.5-2.8,1-3.7c1.5-0.9,3-0.5,3.9,1c0.3,0.6,0.4,1,0.5,1.2l-0.6,0.1
+     c0-0.3-0.1-0.7-0.4-1.1c-0.7-1.1-1.8-1.4-3-0.7c-1.1,0.7-1.5,1.8-0.8,2.9c0.2,0.4,0.5,0.7,0.8,0.9L57,20.4z" />
+        <path d="M61.3,24.3c-1.8,0.7-3.1,0-3.6-1.3c-0.5-1.3,0.2-2.7,1.7-3.3c1.6-0.6,3.1,0,3.6,1.3C63.5,22.4,62.8,23.7,61.3,24.3z
+      M59.7,20.4c-1.1,0.4-1.8,1.4-1.4,2.4c0.4,1,1.6,1.3,2.7,0.8c1-0.4,1.9-1.3,1.5-2.4C62,20.1,60.8,19.9,59.7,20.4z" />
+        <path d="M60.6,26.4l-1.8-0.3l-0.1-0.7l5.7,0.9l0.2,0.8l-5,2.8l-0.1-0.7l1.6-0.9L60.6,26.4z M61.5,28.1l1.4-0.8
+     c0.3-0.2,0.6-0.3,0.9-0.5l0,0c-0.3,0-0.7-0.1-1-0.1l-1.6-0.2L61.5,28.1z" />
+        <path d="M64.9,30.4c0.1,0.4,0.1,0.9,0.1,1.3c0,0.8-0.1,1.2-0.4,1.6c-0.2,0.3-0.6,0.4-1,0.4c-0.7,0-1.2-0.4-1.4-1l0,0
+     c-0.1,0.4-0.5,0.7-1.1,0.8c-0.8,0.2-1.3,0.3-1.5,0.4l0-0.7c0.2-0.1,0.6-0.2,1.3-0.4c0.7-0.2,1-0.5,1-1.1l0-0.7l-2.4,0l0-0.7
+     L64.9,30.4z M62.4,31.1l0,0.7c0,0.8,0.4,1.2,1.1,1.2c0.7,0,1-0.5,1-1.3c0-0.3,0-0.6-0.1-0.7L62.4,31.1z" />
+        <path d="M63.2,43c-0.1,0.3-0.2,0.8-0.4,1.3c-0.3,0.6-0.6,1.1-1,1.3c-0.4,0.2-0.8,0.2-1.2,0c-0.5-0.2-0.8-0.5-0.9-0.8
+     c-0.2-0.5-0.2-1.1,0.1-1.8c0.1-0.2,0.2-0.4,0.3-0.5l-2-0.8l0.3-0.7L63.2,43z M60.5,42.7c-0.1,0.1-0.2,0.3-0.3,0.5
+     c-0.3,0.8-0.1,1.4,0.6,1.7c0.7,0.3,1.2-0.1,1.5-0.8c0.1-0.3,0.2-0.5,0.2-0.6L60.5,42.7z" />
+        <path d="M56.6,50.2c-1.6-1-1.8-2.5-1.1-3.7c0.8-1.2,2.2-1.5,3.6-0.6c1.5,0.9,1.9,2.4,1.1,3.7C59.5,50.8,58,51,56.6,50.2z
+      M58.8,46.5c-1-0.6-2.2-0.6-2.8,0.3c-0.6,1,0,2,1,2.7c0.9,0.6,2.2,0.7,2.8-0.3C60.4,48.2,59.8,47.2,58.8,46.5z" />
+        <path d="M51.4,52.2c0.1-0.3,0.3-0.8,0.8-1.2c1-1.1,2.5-1.4,3.8-0.2c1.3,1.1,1.4,2.8,0.2,4c-0.5,0.5-0.8,0.7-1,0.8l-0.3-0.5
+     c0.3-0.1,0.6-0.3,0.9-0.7c0.9-1,0.8-2.1-0.3-3.1c-1-0.9-2.1-0.9-3,0.1c-0.3,0.3-0.5,0.7-0.6,1L51.4,52.2z" />
+        <path d="M49,57.5c-1.2-1.5-0.9-3,0.2-3.8c1.1-0.9,2.6-0.6,3.6,0.7c1.1,1.4,0.9,2.9-0.2,3.8C51.5,59,50,58.7,49,57.5z M52.3,54.8
+     c-0.7-0.9-1.9-1.3-2.7-0.7c-0.9,0.7-0.7,1.9,0,2.9c0.7,0.9,1.8,1.4,2.7,0.7C53.2,56.9,53,55.7,52.3,54.8z" />
+        <path d="M46.8,57.4l-0.3-1.8l0.6-0.3l0.9,5.7l-0.7,0.4l-4.2-3.9l0.7-0.4l1.3,1.2L46.8,57.4z M45.5,58.8l1.2,1.1
+     c0.3,0.3,0.5,0.5,0.7,0.7l0,0c-0.1-0.3-0.2-0.7-0.2-1L46.9,58L45.5,58.8z" />
+        <path
+          d="M44.3,62.7c-0.3,0.2-0.8,0.4-1.2,0.5c-0.7,0.2-1.2,0.3-1.6,0.1c-0.3-0.1-0.6-0.4-0.7-0.8c-0.2-0.7,0.1-1.3,0.5-1.6l0,0
+     c-0.4,0-0.8-0.3-1.1-0.8c-0.4-0.7-0.7-1.1-0.9-1.3l0.7-0.2c0.1,0.1,0.4,0.5,0.8,1.1c0.4,0.7,0.8,0.8,1.4,0.7l0.6-0.2l-0.7-2.2
+     l0.7-0.2L44.3,62.7z M42.8,60.6l-0.7,0.2c-0.7,0.2-1,0.8-0.8,1.4c0.2,0.7,0.8,0.8,1.5,0.6c0.3-0.1,0.5-0.2,0.6-0.3L42.8,60.6z" />
+        <path d="M33.7,64.9C33.4,65,32.9,65,32.4,65c-0.7,0-1.2-0.2-1.5-0.5c-0.3-0.3-0.5-0.7-0.5-1.1c0-0.5,0.2-0.9,0.4-1.2
+     c0.4-0.4,1-0.6,1.7-0.6c0.2,0,0.4,0,0.6,0.1l0-2.2l0.7,0L33.7,64.9z M33.1,62.3c-0.2,0-0.3-0.1-0.6-0.1c-0.8,0-1.4,0.4-1.4,1.1
+     c0,0.7,0.5,1.1,1.3,1.1c0.3,0,0.5,0,0.7,0L33.1,62.3z" />
+        <path
+          d="M24.6,61.4c0.3-1.8,1.6-2.6,3-2.4c1.4,0.3,2.2,1.5,1.9,3.2c-0.3,1.7-1.6,2.6-3,2.4C25.1,64.2,24.4,62.9,24.6,61.4z
+      M28.8,62c0.2-1.1-0.2-2.3-1.3-2.5c-1.1-0.2-1.9,0.7-2.1,1.9c-0.2,1.1,0.2,2.3,1.3,2.5C27.8,64.2,28.6,63.2,28.8,62z" />
+        <path d="M20.9,57.2c0.3,0,0.8,0,1.4,0.3c1.4,0.5,2.2,1.9,1.5,3.5c-0.6,1.6-2.1,2.3-3.7,1.7c-0.6-0.2-1-0.5-1.1-0.7l0.4-0.5
+     c0.2,0.2,0.5,0.4,0.9,0.6c1.2,0.5,2.3,0,2.8-1.3c0.5-1.2,0.1-2.3-1.2-2.8c-0.4-0.2-0.8-0.2-1.2-0.2L20.9,57.2z" />
+        <path d="M15.1,56.8c1-1.6,2.4-1.9,3.6-1.2c1.2,0.7,1.5,2.2,0.7,3.6c-0.9,1.5-2.4,1.9-3.6,1.2C14.6,59.7,14.3,58.2,15.1,56.8z
+      M18.8,58.9c0.6-1,0.6-2.2-0.4-2.8c-1-0.6-2,0-2.7,1c-0.6,0.9-0.6,2.2,0.4,2.8C17.1,60.6,18.2,59.9,18.8,58.9z" />
+        <path d="M14.4,54.8l1.6-0.9l0.5,0.5l-5,2.9l-0.6-0.6l2.2-5.3l0.6,0.5l-0.7,1.7L14.4,54.8z M12.7,54L12,55.5
+     c-0.1,0.3-0.3,0.6-0.4,0.9l0,0c0.3-0.2,0.6-0.4,0.9-0.6l1.4-0.8L12.7,54z" />
+        <path
+          d="M8.5,54.3c-0.3-0.2-0.6-0.6-0.9-1c-0.5-0.6-0.7-1-0.7-1.5c0-0.4,0.2-0.7,0.5-1c0.6-0.5,1.2-0.4,1.7-0.1l0,0
+     c-0.2-0.4,0-0.9,0.3-1.3c0.5-0.6,0.8-1.1,0.9-1.3l0.5,0.6c-0.1,0.2-0.3,0.6-0.8,1.1c-0.5,0.6-0.5,1-0.1,1.5l0.4,0.5l1.8-1.5
+     l0.4,0.5L8.5,54.3z M10,52.2l-0.5-0.6C9.1,51,8.4,50.9,8,51.3c-0.5,0.4-0.5,1,0,1.6c0.2,0.3,0.4,0.4,0.5,0.5L10,52.2z" />
+        <path d="M2.7,45.2c-0.2-0.3-0.4-0.7-0.6-1.2c-0.2-0.7-0.3-1.2-0.1-1.6c0.1-0.4,0.4-0.7,0.9-0.8c0.5-0.2,0.9-0.2,1.2,0
+     c0.5,0.2,0.9,0.7,1.1,1.4c0.1,0.2,0.1,0.4,0.2,0.5l2-0.8l0.2,0.7L2.7,45.2z M4.9,43.6c0-0.2-0.1-0.3-0.2-0.6
+     c-0.3-0.8-0.9-1.1-1.6-0.9c-0.7,0.3-0.8,0.8-0.5,1.6c0.1,0.3,0.2,0.5,0.3,0.6L4.9,43.6z" />
+        <path d="M2.8,35.4c1.8-0.3,3,0.6,3.3,2c0.3,1.4-0.7,2.6-2.3,2.9c-1.7,0.3-3-0.5-3.3-2C0.3,36.9,1.2,35.7,2.8,35.4z M3.7,39.6
+     c1.1-0.2,2.1-1,1.9-2.1c-0.2-1.1-1.3-1.5-2.5-1.3c-1.1,0.2-2.1,1-1.9,2.1C1.3,39.4,2.5,39.8,3.7,39.6z" />
+        <path d="M5.3,30.5c0.1,0.3,0.3,0.8,0.3,1.4c0,1.5-0.9,2.7-2.7,2.7c-1.7,0-2.9-1.1-2.9-2.8c0-0.7,0.1-1.1,0.2-1.3l0.6,0.2
+     c-0.1,0.3-0.2,0.6-0.2,1.1c0,1.3,0.9,2.1,2.3,2.1c1.3,0,2.2-0.8,2.2-2.1c0-0.4-0.1-0.9-0.2-1.1L5.3,30.5z" />
+        <path d="M3.6,24.9c1.8,0.3,2.6,1.6,2.4,3c-0.2,1.4-1.5,2.2-3.1,1.9c-1.7-0.3-2.6-1.6-2.4-3C0.8,25.4,2,24.6,3.6,24.9z M3,29.1
+     c1.1,0.2,2.3-0.2,2.5-1.3c0.2-1.1-0.7-1.9-1.9-2.1c-1.1-0.2-2.3,0.2-2.5,1.3C0.9,28.1,1.8,28.9,3,29.1z" />
+        <path d="M5.3,23.5l1.4,1.1l-0.3,0.7L2,21.6l0.3-0.8L8,21l-0.3,0.7l-1.8,0L5.3,23.5z M5.4,21.6l-1.7,0c-0.4,0-0.7,0-1-0.1l0,0
+     c0.3,0.2,0.6,0.4,0.8,0.6l1.3,1L5.4,21.6z" />
+        <path
+          d="M3.6,17.9c0.1-0.3,0.3-0.8,0.6-1.2c0.4-0.7,0.7-1,1.2-1.2c0.3-0.1,0.7-0.1,1.1,0.1c0.6,0.4,0.8,1,0.7,1.6l0,0
+     c0.3-0.3,0.8-0.3,1.3-0.2c0.7,0.2,1.3,0.4,1.5,0.4l-0.4,0.6c-0.2,0-0.6-0.1-1.3-0.3c-0.7-0.2-1.1-0.1-1.5,0.4l-0.3,0.6l2.1,1.2
+     l-0.3,0.6L3.6,17.9z M6.1,18.5l0.4-0.6c0.4-0.7,0.2-1.3-0.3-1.6c-0.6-0.3-1.1-0.1-1.5,0.6c-0.2,0.3-0.3,0.5-0.3,0.6L6.1,18.5z" />
+      </g>
+    </svg>
+
+  </a>
+
+
+  <!-- ===============================================-->
+  <!--    Main Content-->
+  <!-- ===============================================-->
+  <main class="main" id="top">
+    <!-- nav 전체 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top d-block     my-3 mx-4 "
+      data-navbar-on-scroll="data-navbar-on-scroll">
+
+      <div class="container">
+        <a class="navbar-brand d-inline-flex me-0" href="index.html">
+          <!-- 로고 -->
+          <img class="logo card-img d-lg-none"
+            src="https://raw.githubusercontent.com/EHEN123/boot5/72e0b273717e98543ffb6125751b76754e245543/logo.svg"
+            alt="logo" />
+        </a>
+
+        <!-- 토글(반응형) -->
+        <button class="navBtn navbar-toggler collapsed d-lg-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse border-top border-lg-0 mt-lg-0 d-lg-flex justify-content-between"
+          id="navbarSupportedContent">
+
+          <a class="navbar-brand d-inline-flex me-0" href="index.html">
+            <img class="logo card-img d-none d-lg-block"
+              src="https://raw.githubusercontent.com/EHEN123/boot5/72e0b273717e98543ffb6125751b76754e245543/logo.svg"
+              alt="logo" />
+          </a>
+
+          <!-- nav -->
+          <ul class="navbar-nav mb-lg-0 ">
+            <!-- <li class="nav-item px-2 ps-lg-0"><a class="nav-link fw-bold" aria-current="page" href="index.html">HOME</a>
+            </li> -->
+            <li class="nav-item px-2 ps-lg-0 hover-target"><a class="nav-link fw-bold" aria-current="page"
+                href="#top">HOME</a>
+            </li>
+            <li class="nav-item px-2"><a class="nav-link fw-bold  " href="#aboutUs">ABOUT US</a></li>
+            <li class="nav-item px-2"><a class="nav-link fw-bold" href="#product">PRODUCT</a></li>
+            <li class="nav-item px-2"><a class="nav-link fw-bold" href="#1dClass">1Day CLASS</a></li>
+          </ul>
+
+          <!-- UI -->
+          <div class="d-none d-lg-flex">
+            <form class="form d-flex justify-content-center gap-3">
+              <a href="##">
+                <img class="search"
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/657517aa0197fdb0d0ea907a9460fff91d69b059/search.svg"
+                  alt="search" />
+              </a>
+              <a href="##">
+                <img class="mypage"
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/bd84ec3e05da5bd93ed2068fe367ca360d445ce9/person.svg"
+                  alt="mypage" />
+              </a>
+              <a href="##">
+                <img class="bag"
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/bd84ec3e05da5bd93ed2068fe367ca360d445ce9/bag.svg"
+                  alt="bag" />
+              </a>
+            </form>
+          </div>
+        </div><!--//nav 전체-->
+
+      </div>
+
+
+    </nav>
+
+
+    <section class="main py-0 px-4 pt-5" id="header">
+      <!-- 전체를 감싸는 큰 div(pc~태블릿) -->
+      <div class="pcVisual container-fluid  overflow-hiddens    d-none d-md-flex pt-3 mt-5 ">
+
+        <!-- 좌측 세로 div -->
+        <!-- 텍스트 -->
+        <div class="box01 mainBanner row align-items-center col-7 d-flex flex-column justify-content-between">
+          <div>
+
+            <!-- 상단 -->
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- 아이콘들 -->
+              <svg class="mainIcon" width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.0056 131C48.4675 131 58.7122 125.789 65.5001 117.607C72.2879 125.789 82.5327 131 93.9945 131C114.432 131 131 114.432 131 93.9945C131 82.5327 125.789 72.2879 117.607 65.5001C125.789 58.7122 131 48.4675 131 37.0056C131 16.568 114.432 0 93.9945 0C82.5327 0 72.2879 5.21094 65.5001 13.393C58.7122 5.21094 48.4675 0 37.0056 0C16.568 0 0 16.568 0 37.0056C0 48.4675 5.21094 58.7122 13.393 65.5001C5.21094 72.2879 0 82.5327 0 93.9945C0 114.432 16.568 131 37.0056 131Z" fill="black" fill-opacity="0.7"/>
+                </svg>
+                
+
+              <h1 class="line blur-target mx-3 mb-0"></h1>
+
+
+              <!-- text01 -->
+              <div class="text01 d-flex flex-column align-items-end justify-content-right">
+                <h1 class=" blur-target    lh-sm fs-lg-6 fs-xxl-7  ">LITTLE SPECIAL</h1>
+                <h1 class=" blur-target thin   lh-sm fs-lg-6 fs-xxl-7">THINGS IN</h1>
+              </div>
+            </div>
+            
+            
+            <h1 class=" blur-target black   lh-sm fs-lg-6 fs-xxl-7">EVERYDAY LIFE</h1>
+            <p class=" blur-target    text-700">Get high-quality aesthetic photographs of your valuable products within
+              few days </p>
+            <div class="button"><a class="Lbtn btn-sm btn-warning rounded-pill" href="#!"><i
+                  class="fas fa-camera me-2"></i>VIEW DETAIL</a></div>
+
+
+          </div>
+
+          <!-- 글씨반복 -->
+          <div class="row">
+
+            <div class="loofText col-12  blur-target">
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            </div>
+
+
+            <!-- 슬라이드 -->
+
+            <div class="slide gx-2 col-12">
+              <div>
+                <div class="swiper-container pb-4 overflow-hidden" data-pagination-target="pagination1">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-1.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-2.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-3.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-4.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-5.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-1.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-2.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-3.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-4.png"
+                        alt="products" />
+                    </div>
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-5.png"
+                        alt="products" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- //좌측 세로 div -->
+
+
+        <!-- 우측 div -->
+        <div class="box02 mt-0 mb-4 ms-4 d-flex align-items-center justify-content-center w-100 bg-dark">
+          <p style="color: aliceblue;">여기에 영상 링크 걸기...</p>
+
+        </div>
+
+
+
+      </div>
+
+
+      <!-- 전체를 감싸는 큰 div(모바일) -->
+      <div class="mdVisual container-fluid     d-flex flex-column d-md-none mt-5 px-0 min-vh-75">
+
+        <!-- visual 이미지 -->
+        <div class="visualImg d-flex justify-content-center align-items-center mb-3 bg-primary flex-1 text-white">
+          여기 이미지
+        </div>
+
+        <!-- 글씨반복 -->
+        <div class="d-flex justify-content-center align-items-center">
+
+          <div class="loofText col-12  blur-target">
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+            <span class="Ltext"> This text loops infinitely around the x-axis</span>
+          </div>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div class="row d-flex justify-content-center align-items-center px-3">
+
+          <div class="slide gx-2 col-12">
+            <div>
+              <div class="swiper-container pb-4 overflow-hidden" data-pagination-target="pagination1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-1.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-2.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-3.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-4.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-5.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-1.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-2.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-3.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-4.png"
+                      alt="products" />
+                  </div>
+                  <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-5.png"
+                      alt="products" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- c01 -->
+    <section class="py-4 bg-dark text-white   target-section" id="aboutUs">
+      <div class="container-xxl py-3">
+        <div class=" row flex-center h-100">
+          <div class="col-12">
+            <div class="c01text">
+              <h1 class="fadeIn">My Favorite Thing's</h1>
+              <h5 class="fadeIn mt-3">“ 소소한 일상이 예술로 변하는 순간,<br /> 포코아르와 함께하세요. ”</h5>
+
+              <div class="star fadeIn d-flex justify-content-center my-3">
+                <img
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/23d0a9845164b98da14eff86467772952017f6be/star.svg"
+                  alt="star">
+                <img
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/23d0a9845164b98da14eff86467772952017f6be/star.svg"
+                  alt="star">
+                <img
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/23d0a9845164b98da14eff86467772952017f6be/star.svg"
+                  alt="star">
+              </div>
+
+              <div class="fadeIn">
+                <p>포코아르는 <br />POCO(조금씩) + COAR(스며들다)라는 의미로,</p>
+                <p class="pt">블루베리를 먹었을 때 입술이 파랗게 물드는 것처럼 <br />일상에 조금씩 스며들어</p>
+                <p class="pt">작은 변화와 더불어 편의성까지 만족시킬 수 있는 <br />차별화된 컬러감의 세라믹&아트 상품을 제안합니다.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- c02 -->
+    <section>
+      <div class="container" id="product">
+        <div class="row h-100">
+          <div class="col-lg-7 mx-auto text-center mb-3">
+            <h1 class="text-center lh-sm fs-lg-6 fs-xxl-7">PRODUCT</h1>
+          </div>
+          <div class="col-12">
+            <nav></nav>
+            <div class="nav nav-tabs clickr-tabs mb-3 justify-content-center" id="nav-tab" role="tablist">
+
+              <button class="nav-link active" id="nav-ALL-tab" data-bs-toggle="tab" data-bs-target="#nav-ALL"
+                type="button" role="tab" aria-controls="nav-ALL" aria-selected="true">ALL</button>
+
+              <button class="nav-link" id="nav-PLATE-tab" data-bs-toggle="tab" data-bs-target="#nav-PLATE" type="button"
+                role="tab" aria-controls="nav-PLATE" aria-selected="false">PLATE</button>
+
+              <button class="nav-link" id="nav-MUG-tab" data-bs-toggle="tab" data-bs-target="#nav-MUG"
+                type="button" role="tab" aria-controls="nav-MUG" aria-selected="false">MUG</button>
+
+              <button class="nav-link" id="nav-LIFE-tab" data-bs-toggle="tab" data-bs-target="#nav-LIFE"
+                type="button" role="tab" aria-controls="nav-LIFE" aria-selected="false">LIFE</button>
+
+            </div>
+          </div>
+
+          <div class="tab-content" id="nav-tabContent">
+
+            <!-- ALL -->
+            <div class="tab-pane fade show active" id="nav-ALL" role="tabpanel" aria-labelledby="nav-ALL-tab">
+              <div class="row gx-3">
+
+                <div class="col-6 col-xl-3 mb-3 h-100 ">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-1.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-3.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-4.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-5.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-6.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-5.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-center mt-5"> <a
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">VIEW MORE<i
+                      class="fas fa-arrow-right ms-2"></i></a></div>
+
+              </div>
+            </div>
+
+            <!-- PLATE -->
+            <div class="tab-pane fade" id="nav-PLATE" role="tabpanel" aria-labelledby="nav-PLATE-tab">
+              <div class="row gx-3">
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-1.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-3.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-4.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-5.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-6.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5"> <a
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">View portfolio<i
+                      class="fas fa-arrow-right ms-2"></i></a></div>
+              </div>
+            </div>
+
+            <!-- MUG -->
+            <div class="tab-pane fade" id="nav-MUG" role="tabpanel" aria-labelledby="nav-MUG-tab">
+              <div class="row gx-3">
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-1.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-2.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-3.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-4.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-5.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-6.png"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5"> <a
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">View portfolio<i
+                      class="fas fa-arrow-right ms-2"></i></a></div>
+              </div>
+            </div>
+
+            <!-- LIFE -->
+            <div class="tab-pane fade" id="nav-LIFE" role="tabpanel" aria-labelledby="nav-LIFE-tab">
+              <div class="row gx-3">
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
+                      src="assets/img/gallery/LIFE-1.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
+                      src="assets/img/gallery/LIFE-2.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
+                      src="assets/img/gallery/LIFE-3.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
+                      src="assets/img/gallery/LIFE-4.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
+                      src="assets/img/gallery/LIFE-5.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
+                      src="assets/img/gallery/LIFE-6.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5"> <a
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">View portfolio<i
+                      class="fas fa-arrow-right ms-2"></i></a></div>
+              </div>
+            </div>
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- c03 -->
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-5 bg-dark" id="1dClass">
+
+      <div class="c03 container">
+        <div class="row gx-3 ">
+          <h1 class="text-center lh-sm mb-5 fs-lg-6 fs-xxl-7 text-white">1Day CLASS</h1>
+
+
+          <div class="c03Box d-block d-lg-flex col-12 justify-content-between align-items-stretch overflow-hidden">
+
+            <!-- 좌측 -->
+            <div class="box03 col-12 col-lg-5">
+
+              <div class="box03Img"><img src="" alt=""></div>
+
+              <!-- 지도 -->
+              <div id="map"></div>
+            </div>
+
+
+            <!-- 우측div -->
+            <div class="box04 col-12 col-lg-6 mt-5 mt-lg-0">
+
+              <!-- 폼 -->
+              <div class="Classform" class="bg-light">
+                <form action="#" method="POST" class="classform_form">
+                  <h3 class="my-2 pb-3">1DAY CLASS 예약</h3>
+
+                  <div class="d-block  d-lg-flex my-2">
+                    <div class="pe-lg-5">
+                      <div class="F_name">　이름</div>
+                      <input type="text" placeholder="성함을 입력해 주세요." name="name" class="input">
+                    </div>
+
+                    <div>
+                      <div class="F_tel">　연락처</div>
+                      <input type="tel" placeholder="010-0000-0000" name="phone" class="input">
+                    </div>
+                  </div>
+
+                  <div class=" d-lg-flex my-2">
+                    <div class="pe-2 pe-lg-5">
+                      <div class="F_people">　수강 인원</div>
+                      <select name="num_people" class="option">
+                        <option value="1명">1명</option>
+                        <option value="2명">2명</option>
+                        <option value="3명">3명</option>
+                        <option value="3명">4명</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <div class="F_people">　수강 날짜</div>
+                      <input type="date" name="date" class="date">
+                    </div>
+                  </div>
+
+                  <div class="classType my-3">
+                    <div class="F_people">　수강 작품</div>
+                    <button type="button" class="category-btn" data-category="plate">PLATE</button>
+                    <button type="button" class="category-btn" data-category="mug">MUG</button>
+                    <br class="d-xxl-none" />
+                    <button type="button" class="category-btn" data-category="incense">INCENSE</button>
+                    <button type="button" class="category-btn" data-category="life">LIFE</button>
+                  </div>
+
+                  <button type="submit"
+                    class="sumbit my-5 d-flex align-items-center justify-content-center">예약하기</button>
+
+                  <div class="mt-3">
+                    <p class="pb-1">※ 당일 예약 취소 시에는 환불이 어려울 수 있습니다.</p>
+                    <p class="pb-1">※ 모든 도자기 재료는 클래스에서 제공되므로, 별도로 구매하지 않으셔도 됩니다.</p>
+                    <p class="pb-1">※ 재료에 대한 알레르기가 있는 경우 사전에 알려주시기 바랍니다.</p>
+                  </div>
+                </form>
+              </div>
+            </div> <!-- //폼박스 -->
+
+
+          </div> <!-- //c03박스 -->
+
+
+        </div>
+      </div>
+      </div><!-- //container-->
+
+
+
+
+
+
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+    <!-- footer -->
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+    <section class="py-0 pt-7">
+
+      <div class="container">
+        <div class="row justify-content-xl-between gx-3">
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <h5 class="lh-lg fw-bold text-1000">
+              <a href="#"><img
+                  src="https://raw.githubusercontent.com/EHEN123/boot5/72e0b273717e98543ffb6125751b76754e245543/logo.svg"
+                  alt="하단로고" style="width: 150px;"></a>
+            </h5>
+            <p class="business">상호명 : 포코아르(POCO:AR)<br />대표자 : 이지유, 장연지</p>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <h5 class="lh-lg fw-bold text-1000">ABOUT US</h5>
+            <ul class="list-unstyled mb-md-4 mb-lg-0">
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Partners</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Developers</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Apps</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Blogs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <h5 class="lh-lg fw-bold text-1000">ORDER</h5>
+            <ul class="list-unstyled mb-md-4 mb-lg-0">
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">About Us</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Leadership</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Investor Relations</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">News</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-3">
+            <h5 class="lh-lg fw-bold text-1000">HELP</h5>
+            <ul class="list-unstyled mb-md-4 mb-lg-0">
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">About Us</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Leadership</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">Investor Relations</a></li>
+              <li class="lh-lg"><a class="text-800 text-decoration-none" href="#!">News</a></li>
+            </ul>
+          </div>
+
+          <div class="footerSns col-sm-6 col-md-4 col-lg-3 col-xl-2">
+            <div class="text-center">
+              <a href="#" class="me-3 fs-3">
+                <svg aria-label="Instagram" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Instagram</title><path d="M12 2.982c2.937 0 3.285.011 4.445.064a6.087 6.087 0 0 1 2.042.379 3.408 3.408 0 0 1 1.265.823 3.408 3.408 0 0 1 .823 1.265 6.087 6.087 0 0 1 .379 2.042c.053 1.16.064 1.508.064 4.445s-.011 3.285-.064 4.445a6.087 6.087 0 0 1-.379 2.042 3.643 3.643 0 0 1-2.088 2.088 6.087 6.087 0 0 1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.087 6.087 0 0 1-2.043-.379 3.408 3.408 0 0 1-1.264-.823 3.408 3.408 0 0 1-.823-1.265 6.087 6.087 0 0 1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.087 6.087 0 0 1 .379-2.042 3.408 3.408 0 0 1 .823-1.265 3.408 3.408 0 0 1 1.265-.823 6.087 6.087 0 0 1 2.042-.379c1.16-.053 1.508-.064 4.445-.064M12 1c-2.987 0-3.362.013-4.535.066a8.074 8.074 0 0 0-2.67.511 5.392 5.392 0 0 0-1.949 1.27 5.392 5.392 0 0 0-1.269 1.948 8.074 8.074 0 0 0-.51 2.67C1.012 8.638 1 9.013 1 12s.013 3.362.066 4.535a8.074 8.074 0 0 0 .511 2.67 5.392 5.392 0 0 0 1.27 1.949 5.392 5.392 0 0 0 1.948 1.269 8.074 8.074 0 0 0 2.67.51C8.638 22.988 9.013 23 12 23s3.362-.013 4.535-.066a8.074 8.074 0 0 0 2.67-.511 5.625 5.625 0 0 0 3.218-3.218 8.074 8.074 0 0 0 .51-2.67C22.988 15.362 23 14.987 23 12s-.013-3.362-.066-4.535a8.074 8.074 0 0 0-.511-2.67 5.392 5.392 0 0 0-1.27-1.949 5.392 5.392 0 0 0-1.948-1.269 8.074 8.074 0 0 0-2.67-.51C15.362 1.012 14.987 1 12 1Zm0 5.351A5.649 5.649 0 1 0 17.649 12 5.649 5.649 0 0 0 12 6.351Zm0 9.316A3.667 3.667 0 1 1 15.667 12 3.667 3.667 0 0 1 12 15.667Zm5.872-10.859a1.32 1.32 0 1 0 1.32 1.32 1.32 1.32 0 0 0-1.32-1.32Z"></path></svg>
+              </a>
+              <a href="#" class="me-3 fs-3">
+                <svg aria-label="" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 192 192" width="24"><title></title><path class="xcslo1z" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path></svg>
+              </a>
+              <a href="#" class="me-3 fs-3">
+                <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" width="24" height="24">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-bottom border-3 my-4"></div>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="my-2 text-center text-md-start">𝐏𝐎𝐂𝐎:𝐀𝐑✦ ᴀʀᴛ & ʜᴀɴᴅ ᴍᴀᴅᴇ ᴘᴏᴛᴛᴇʀʏ sᴛᴜᴅɪᴏ</p>
+          </div>
+        </div>
+      </div><!-- end of .container-->
+
+    </section>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+  </main>
+  <!-- ===============================================-->
+  <!--    End of Main Content-->
+  <!-- ===============================================-->
+
+
+
+
+  <!-- ===============================================-->
+  <!--    JavaScripts-->
+  <!-- ===============================================-->
+
+
+  <script src="assets/js/Lee.js"></script>
+
+
+  <script src="vendors/@popperjs/popper.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/is/is.min.js"></script>
+  <script src="vendors/swiper/swiper-bundle.min.js"> </script>
+  <script src="vendors/swiper/swiper-bundle.js"> </script>
+  <script src="vendors/fontawesome/all.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>

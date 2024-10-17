@@ -1,0 +1,66 @@
+mixin FooterList(...items)
+  each item in items
+    li.lh-lg
+      a.text-800.text-decoration-none(href='#!')
+        =item
+
+mixin Footer
+  +Section.py-0.pt-7
+    .row.justify-content-xl-between.gx-3
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
+        h5.lh-lg.fw-bold.text-1000 Why Us
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Channel','Engagement','Scale','Watch Demo')
+
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
+        h5.lh-lg.fw-bold.text-1000 Product
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Features','Integrations','Enterprise','Solutions')
+
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
+        h5.lh-lg.fw-bold.text-1000 Resources
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Partners','Developers','Apps','Blogs')
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
+        h5.lh-lg.fw-bold.text-1000 Company
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('About Us','Leadership','Investor Relations','News') 
+      .col-6.col-md-4.col-lg-3.col-xl-2.mb-3
+        h5.lh-lg.fw-bold.text-1000 Pricing
+        ul.list-unstyled.mb-md-4.mb-lg-0
+          +FooterList('Plans','Paid vs. Free')       
+
+      .col-sm-6.col-md-4.col-lg-3.col-xl-2
+        h5.lh-lg.fw-bold.text-1000 Contact
+
+        p.text-800
+          i.fas.fa-phone-alt.text-primary.me-2
+          span.text-900 +214556905345
+        p.text-800
+          i.fas.fa-envelope.text-warning.me-2
+          span.text-800 example@email.com
+        p.text-800
+          i.fas.fa-map-marker-alt.text-success.me-2
+          span.text-800 567, Kansas,  San Francisco, USA 
+      .col-12
+        .text-center.my-4
+          a(href='#!')
+            i.me-4.fab.fa-facebook.fs-3.text-facebook
+          a(href='#!')  
+            i.me-4.fab.fa-twitter.fs-3.text-twitter
+          a(href='#!')  
+            i.me-4.fab.fa-instagram.fs-3.text-instagram
+
+
+    .border-bottom.border-3
+    .row
+      .col-md-6
+        p.my-2.text-center.text-md-start All rights Reserved &copy; Your Company, 2021
+      .col-md-6.order-1.order-md-0
+        p.my-2.text-1000.text-md-end.text-center  Made with&nbsp;
+          svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='15' height='15' fill='#EB6453' viewBox='0 0 16 16')
+            path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+          |&nbsp;by&nbsp;
+          a(href='https://themewagon.com/' target='_blank').text-800 ThemeWagon 
+      

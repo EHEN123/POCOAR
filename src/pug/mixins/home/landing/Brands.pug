@@ -1,0 +1,18 @@
+
+mixin Brand(image)
+  .col-sm-6.col-lg&attributes(attributes)
+    img(src=`${CWD}assets/img/gallery/${image}`  alt='brands')
+mixin Brands
+  +Section.py-6
+    .row
+      .col-12
+        p.py-5.text-center Commercial product photography agency
+          br
+          | praised by over 5,000 brands.
+    .row
+      +Brand('netflix.png').mb-4.mb-lg-0.d-flex.flex-center                 
+      +Brand('facebook.png').mb-4.mb-lg-0.d-flex.flex-center                  
+      +Brand('freelancer.png').mb-4.mb-lg-0.d-flex.flex-center                                   
+      +Brand('mailbluster.png').mb-4.mb-lg-0.d-flex.flex-center                  
+      +Brand('theme-wagon.png').mb-4.mb-lg-0.d-flex.flex-center  
+    hr.mt-6                 
