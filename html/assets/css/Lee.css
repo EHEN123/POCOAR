@@ -1,197 +1,3 @@
-/* ============= custom ============= */
-
-body{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
-    color: #333;
-}
-
-
-.Lbtn {
-  color: #333 !important;
-  background-color: #fff !important;
-  border: 3px solid #333 !important; 
-  transition: background 0.5s ease;
-  font-weight: bold;
-}
-
-.Lbtn:hover {
-  background-color: #333 !important;
-  color: #fff !important;
-}
-
-
-
-
-body {
-  cursor: url('https://raw.githubusercontent.com/EHEN123/boot5/954eb51965a5bdb23614679ab7c82235f42bafd0/cursor.svg'), auto; /* 기본 커서 */
-}
-
-a, button, .clickable, .nav-link {
-  cursor: url('https://raw.githubusercontent.com/EHEN123/boot5/954eb51965a5bdb23614679ab7c82235f42bafd0/cursor_hover.svg'), pointer !important;
-}
-
-.custom-cursor {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  pointer-events: none; /* 클릭 방지 */
-  transition: transform 0.1s ease; /* 부드러운 이동 */
-  z-index: 100000;
-  background-image: url('https://raw.githubusercontent.com/EHEN123/boot5/bd89f112e99188b4f0d0cf86cf2a4c05c0621e68/cursor_FW.svg'); /* 초기 SVG */
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.cursor-animation {
-  position: absolute;
-  pointer-events: none; /* 마우스 이벤트 무시 */
-  animation: cursorGrow 0.5s forwards; /* 커서 크기 증가 애니메이션 */
-}
-
-.cursor-shrink {
-  animation: cursorShrink 0.5s forwards; /* 커서 크기 감소 애니메이션 */
-}
-
-
-
-.blur-target {
-  transition: filter 0.5s ease;
-  /* 블러 효과 애니메이션 */
-}
-
-.blur-target:hover {
-  filter: blur(5px);
-  /* 호버 시 블러 효과 */
-  transition: transform 1s;
-  transition: filter 0.5s;
-  /* 블러 효과 애니메이션 */
-}
-
-
-/* ============= topBtn ============= */
-
-
-.topBtn {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none; /* 링크 밑줄 제거 */
-  z-index: 9;
-  margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.topText {
-  position: absolute;
-  color: #555; /* 텍스트 색상 */
-  font-size: 14px; /* 폰트 크기 설정 */
-  font-weight: bold;
-  z-index: 10;
-}
-
-#POCOAR_c{
-  fill: #555;
-  transition: transform 10s ease;
-}
-.topBtn:hover {
-  #POCOAR_c{
-  animation: spin 10s linear infinite;
-  }
-}@keyframes spin {
-  from {
-      transform: rotate(0deg);
-  }
-  to {
-      transform: rotate(360deg);
-  }
-}
-
-.topBtn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 65px;
-  height: 65px;
-  background: rgba(255, 255, 255, 0.1); /* 반투명 배경 */
-  border-radius: 50%; /* 원형 */
-  transform: translate(-50%, -50%); /* 중앙 정렬 */
-  backdrop-filter: blur(10px); /* 배경 블러 효과 */
-  filter: blur(5px);
-  z-index: -1; /* 버튼 텍스트 위에 위치하도록 */
-  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
-  opacity: 0; /* 초기 상태에서 보이지 않도록 설정 */
-}
-
-.topBtn:hover::before {
-  opacity: 1; /* 호버 시 나타나도록 설정 */
-}
-
-
-
-
-/* ============= nav ============= */
-
-.navbar {
-  border: 3px solid #000;
-  background-color: #fff;
-  backdrop-filter: 10px !important;
-  border-radius: 100px;
-  
-  &.bg-light {
-    border-radius: 50px !important;
-
-    ul{
-      text-align: right;
-      padding: 0 3rem 1rem;
-    }
-  }
-}
-
-.search,
-.mypage,
-.bag {
-  opacity: 1;
-  transition: opacity 0.5s; 
-}
-.search:hover,
-.mypage:hover,
-.bag:hover {
-  opacity: 0.7;
-}
-
-  
-/* .mainBanner {
-  height: 800px !important;
-} */
-
-.logo {
-  max-width: 150px;
-}
-
-.form a img {
-  width: 20px;
-  height: 20px;
-}
-
-.navBtn{
-  border: none !important;
-}
-
-.main{
-  overflow: hidden;
-}
-
-
-
 /* ============= main ============= */
 
 /* ============= pc ============= */
@@ -279,6 +85,14 @@ a, button, .clickable, .nav-link {
   }
 }
 
+.main_slide img{
+  border-radius: 1.25rem;
+}
+
+.nav button{
+  color: #333 !important;
+}
+
 
 /* ============= mobile ============= */
 /* 3개 슬라이드반응형 */
@@ -359,47 +173,23 @@ a, button, .clickable, .nav-link {
   }
 }
 
-.fadeIn {
-  opacity: 0; /* 초기 상태: 투명함 */
-  transform: translateY(20px); /* 초기 위치: 아래로 이동 */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* 애니메이션 설정 */
-}
-
-.fadeIn.visible {
-  opacity: 1; /* 서서히 나타남 */
-  transform: translateY(0); /* 원래 위치로 돌아옴 */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
 
 /* ============= c03 ============= */
 
 
 #map, .Classform{
-  border: 3px solid #333;
   border-radius: 1.25rem;
 }
 
 #map{
-  height: 300px;
+  height: 48%;
 }
 
 .Classform{
   background: #fff;
 }
 .box03Img{
-  height: 300px;
+  height: 48%;
   background: gray;
   margin-bottom: 30px;
   border-radius: 1.25rem;
@@ -473,17 +263,23 @@ a, button, .clickable, .nav-link {
     width: 100% !important;
   }
 
-  
+  .box03, map{
+    height: 600px;
+  }
 }
 
 
-/* ============= footer ============= */
-
-
-.business{
-  font-size: 12px;
+.IMGslider{
+  animation: roll 60s linear infinite;
+  animation-fill-mode: none;
 }
 
-.footerSns a svg{
-  width: 30px;
+@keyframes roll {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(-300%)
+  }
 }

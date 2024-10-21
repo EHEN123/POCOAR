@@ -1,0 +1,141 @@
+/* ============= nav ============= */
+
+.navbar {
+  border: 3px solid #000;
+  background-color: #fff;
+  backdrop-filter: 10px !important;
+  border-radius: 100px;
+  
+  &.bg-light {
+    border-radius: 50px !important;
+
+    ul{
+      text-align: right;
+      padding: 0 3rem 1rem;
+    }
+  }
+}
+
+.search,
+.mypage,
+.bag {
+  opacity: 1;
+  transition: opacity 0.5s; 
+}
+.search:hover,
+.mypage:hover,
+.bag:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  max-width: 150px;
+}
+
+.form a img {
+  width: 20px;
+  height: 20px;
+}
+
+.navBtn{
+  border: none !important;
+}
+
+.main{
+  overflow: hidden;
+}
+
+
+
+
+/* ============= 스크롤바(scrollbar) ============= */
+
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤바의 너비 설정 */
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+
+
+/* ============= topBtn ============= */
+
+.topBtn {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  z-index: 9;
+}
+
+.topText {
+  position: absolute;
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+#POCOAR_c{
+  fill: #555;
+  transition: transform 10s ease;
+}
+.topBtn:hover {
+  #POCOAR_c{
+  animation: spin 10s linear infinite;
+  }
+}@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.topBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 65px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%; 
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  filter: blur(5px);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.topBtn:hover::before {
+  opacity: 1;
+}
+
+
+
+
+/* ============= footer ============= */
+
+
+.business{
+  font-size: 12px;
+}
+
+.footerSns a svg{
+  width: 30px;
+}

@@ -4701,7 +4701,7 @@ fieldset:disabled .btn {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #757575;
-  background-color: #FFFEFE;
+  /* background-color: #FFFEFE; */
   border-color: transparent;
 }
 
@@ -18450,7 +18450,7 @@ Calaendar icon input[type="date"]::-webkit-calendar-picker-indicator {
 
 .clickr-tabs .nav-link.active,
 .clickr-tabs .nav-item.show .nav-link {
-  border-bottom-color: #005DFF;
+  border-bottom-color: #333;
   color: #005DFF;
 }
 

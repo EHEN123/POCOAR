@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
+<html lang="ko" dir="ltr" Lenis>
 
 <head>
   <meta charset="utf-8">
@@ -39,6 +39,8 @@
   <!-- ===============================================-->
   <!--    Stylesheets-->
   <!-- ===============================================-->
+  <link href="assets/css/common.css" rel="stylesheet" />
+  <link href="assets/css/layout.css" rel="stylesheet" />
   <link href="assets/css/Lee.css" rel="stylesheet" />
   <link href="assets/css/theme.css" rel="stylesheet" />
   <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -57,7 +59,7 @@
 
 
 
-<body data-bs-spy="scroll" data-bs-target="#navbar">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-aos-easing="ease" data-aos-duration="1500" data-aos-delay="0">
   <!-- ===============================================-->
   <!--    TOP   -->
   <!-- ===============================================-->
@@ -230,31 +232,33 @@
 
         <!-- 좌측 세로 div -->
         <!-- 텍스트 -->
-        <div class="box01 mainBanner row align-items-center col-7 d-flex flex-column justify-content-between">
+        <div class="box01 mainBanner row align-items-center col-7 d-flex flex-column justify-content-between" >
           <div>
 
             <!-- 상단 -->
             <div class="d-flex justify-content-between align-items-center">
               <!-- 아이콘들 -->
-              <svg class="mainIcon" width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M37.0056 131C48.4675 131 58.7122 125.789 65.5001 117.607C72.2879 125.789 82.5327 131 93.9945 131C114.432 131 131 114.432 131 93.9945C131 82.5327 125.789 72.2879 117.607 65.5001C125.789 58.7122 131 48.4675 131 37.0056C131 16.568 114.432 0 93.9945 0C82.5327 0 72.2879 5.21094 65.5001 13.393C58.7122 5.21094 48.4675 0 37.0056 0C16.568 0 0 16.568 0 37.0056C0 48.4675 5.21094 58.7122 13.393 65.5001C5.21094 72.2879 0 82.5327 0 93.9945C0 114.432 16.568 131 37.0056 131Z" fill="black" fill-opacity="0.7"/>
-                </svg>
-                
+              <svg class="mainIcon" width="131" height="131" viewBox="0 0 131 131" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M37.0056 131C48.4675 131 58.7122 125.789 65.5001 117.607C72.2879 125.789 82.5327 131 93.9945 131C114.432 131 131 114.432 131 93.9945C131 82.5327 125.789 72.2879 117.607 65.5001C125.789 58.7122 131 48.4675 131 37.0056C131 16.568 114.432 0 93.9945 0C82.5327 0 72.2879 5.21094 65.5001 13.393C58.7122 5.21094 48.4675 0 37.0056 0C16.568 0 0 16.568 0 37.0056C0 48.4675 5.21094 58.7122 13.393 65.5001C5.21094 72.2879 0 82.5327 0 93.9945C0 114.432 16.568 131 37.0056 131Z"
+                  fill="black" fill-opacity="0.7" />
+              </svg>
+
 
               <h1 class="line blur-target mx-3 mb-0"></h1>
 
 
               <!-- text01 -->
               <div class="text01 d-flex flex-column align-items-end justify-content-right">
-                <h1 class=" blur-target    lh-sm fs-lg-6 fs-xxl-7  ">LITTLE SPECIAL</h1>
+                <h1 class=" blur-target    lh-sm fs-lg-6 fs-xxl-7  hover-effect">LITTLE SPECIAL</h1>
                 <h1 class=" blur-target thin   lh-sm fs-lg-6 fs-xxl-7">THINGS IN</h1>
               </div>
             </div>
-            
-            
+
+
             <h1 class=" blur-target black   lh-sm fs-lg-6 fs-xxl-7">EVERYDAY LIFE</h1>
-            <p class=" blur-target    text-700">Get high-quality aesthetic photographs of your valuable products within
-              few days </p>
+            <p class=" blur-target    text-700">Small changes that seep into your daily life, join Pocoir.</p>
             <div class="button"><a class="Lbtn btn-sm btn-warning rounded-pill" href="#!"><i
                   class="fas fa-camera me-2"></i>VIEW DETAIL</a></div>
 
@@ -265,52 +269,59 @@
           <div class="row">
 
             <div class="loofText col-12  blur-target">
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
-              <span class="Ltext"> This text loops infinitely around the x-axis</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
+              <span class="Ltext"> A little sparkle in everyday life</span>
             </div>
 
 
             <!-- 슬라이드 -->
 
             <div class="slide gx-2 col-12">
-              <div>
+              <div class="scroll_wrap">
                 <div class="swiper-container pb-4 overflow-hidden" data-pagination-target="pagination1">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-1.png"
+                  <div class="swiper-wrapper main_slide">
+                    
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_1.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-2.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_2.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-3.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_3.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-4.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_4.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-5.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_5.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-1.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_6.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-2.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_7.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-3.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_8.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-4.png"
+
+                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/main_slide/main_slide_9.jpg"
                         alt="products" />
                     </div>
-                    <div class="swiper-slide h-auto"><img class="w-100" src="assets/img/gallery/product-5.png"
-                        alt="products" />
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -448,203 +459,314 @@
             <nav></nav>
             <div class="nav nav-tabs clickr-tabs mb-3 justify-content-center" id="nav-tab" role="tablist">
 
-              <button class="nav-link active" id="nav-ALL-tab" data-bs-toggle="tab" data-bs-target="#nav-ALL"
-                type="button" role="tab" aria-controls="nav-ALL" aria-selected="true">ALL</button>
+              <button class="nav-link active" id="nav-MINI-MUG-tab" data-bs-toggle="tab" data-bs-target="#nav-MINI-MUG" type="button"
+              role="tab" aria-controls="nav-MINI-MUG" aria-selected="true">MINI-MUG</button>
 
-              <button class="nav-link" id="nav-PLATE-tab" data-bs-toggle="tab" data-bs-target="#nav-PLATE" type="button"
-                role="tab" aria-controls="nav-PLATE" aria-selected="false">PLATE</button>
+              <button class="nav-link" id="nav-MUG-tab" data-bs-toggle="tab" data-bs-target="#nav-MUG" type="button"
+                role="tab" aria-controls="nav-MUG" aria-selected="false">MUG</button>
 
-              <button class="nav-link" id="nav-MUG-tab" data-bs-toggle="tab" data-bs-target="#nav-MUG"
-                type="button" role="tab" aria-controls="nav-MUG" aria-selected="false">MUG</button>
+              <button class="nav-link" id="nav-PLATE-tab" data-bs-toggle="tab" data-bs-target="#nav-PLATE"
+                type="button" role="tab" aria-controls="nav-PLATE" aria-selected="false">PLATE</button>
 
-              <button class="nav-link" id="nav-LIFE-tab" data-bs-toggle="tab" data-bs-target="#nav-LIFE"
-                type="button" role="tab" aria-controls="nav-LIFE" aria-selected="false">LIFE</button>
+              <button class="nav-link" id="nav-LIFE-tab" data-bs-toggle="tab" data-bs-target="#nav-LIFE" type="button"
+                role="tab" aria-controls="nav-LIFE" aria-selected="false">LIFE</button>
 
             </div>
           </div>
 
           <div class="tab-content" id="nav-tabContent">
 
-            <!-- ALL -->
-            <div class="tab-pane fade show active" id="nav-ALL" role="tabpanel" aria-labelledby="nav-ALL-tab">
+
+
+            <!-- MINIMUG -->
+            <div class="tab-pane fade show active" id="nav-MINI-MUG" role="tabpanel" aria-labelledby="nav-MINI-MUG-tab">
               <div class="row gx-3">
 
-                <div class="col-6 col-xl-3 mb-3 h-100 ">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-1.png"
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_1.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_2.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-3.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_3.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-4.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_4.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-5.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_5.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-6.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_6.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-5.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_7.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_8.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_9.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_10.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_11.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/ALL-2.png"
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_12.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_13.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_14.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_15.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/minimug/mini_mug_16.jpg"
                       alt="..." /><a class="stretched-link" href="#!"></a></div>
                 </div>
 
                 <div class="col-12 d-flex justify-content-center mt-5"> <a
                     class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">VIEW MORE<i
                       class="fas fa-arrow-right ms-2"></i></a></div>
-
               </div>
             </div>
+
+
+            <!-- MUG -->
+            <div class="tab-pane fade" id="nav-MUG" role="tabpanel" aria-labelledby="nav-MUG-tab">
+              <div class="row gx-3">
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_1.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_2.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_3.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_4.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_5.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_6.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_7.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_8.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/mug/mug_9.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                </div>
+              
+                <div class="col-12 d-flex justify-content-center mt-5"> <a
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">VIEW MORE<i
+                      class="fas fa-arrow-right ms-2"></i></a></div>
+              </div>
+            </div>
+
 
             <!-- PLATE -->
             <div class="tab-pane fade" id="nav-PLATE" role="tabpanel" aria-labelledby="nav-PLATE-tab">
               <div class="row gx-3">
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-1.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_1.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
                 </div>
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-2.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_2.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
                 </div>
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-3.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_3.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
                 </div>
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-4.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_4.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
                 </div>
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-5.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_5.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
                 </div>
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/PLATE-6.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_6.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
                 </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_7.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_8.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_9.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/plate/plate_10.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+
                 <div class="col-12 d-flex justify-content-center mt-5"> <a
-                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">View portfolio<i
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">VIEW MORE<i
                       class="fas fa-arrow-right ms-2"></i></a></div>
               </div>
             </div>
 
-            <!-- MUG -->
-            <div class="tab-pane fade" id="nav-MUG" role="tabpanel" aria-labelledby="nav-MUG-tab">
-              <div class="row gx-3">
-                <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-1.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
-                </div>
-                <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-2.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
-                </div>
-                <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-3.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
-                </div>
-                <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-4.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
-                </div>
-                <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-5.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
-                </div>
-                <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/MUG-6.png"
-                      alt="..." /><a class="stretched-link" href="#!"></a></div>
-                </div>
-                <div class="col-12 d-flex justify-content-center mt-5"> <a
-                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">View portfolio<i
-                      class="fas fa-arrow-right ms-2"></i></a></div>
-              </div>
-            </div>
 
             <!-- LIFE -->
             <div class="tab-pane fade" id="nav-LIFE" role="tabpanel" aria-labelledby="nav-LIFE-tab">
               <div class="row gx-3">
+
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
-                      src="assets/img/gallery/LIFE-1.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_1.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
                   </div>
                 </div>
+
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
-                      src="assets/img/gallery/LIFE-2.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_2.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
                   </div>
                 </div>
+
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
-                      src="assets/img/gallery/LIFE-3.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_3.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
                   </div>
                 </div>
+
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
-                      src="assets/img/gallery/LIFE-4.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_4.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
                   </div>
                 </div>
+
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
-                      src="assets/img/gallery/LIFE-5.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_5.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
                   </div>
                 </div>
+
                 <div class="col-6 col-xl-3 mb-3 h-100">
-                  <div class="card card-span h-100 "><img class="rounded-3 h-100"
-                      src="assets/img/gallery/LIFE-6.png" alt="..." /><a class="stretched-link" href="#!"></a>
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_6.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
                   </div>
                 </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_7.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_8.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_9.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_10.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3 mb-3 h-100">
+                  <div class="card card-span h-100 "><img class="rounded-3 h-100" src="assets/img/gallery/life/life_11.jpg"
+                      alt="..." /><a class="stretched-link" href="#!"></a>
+                  </div>
+                </div>
+                
+
                 <div class="col-12 d-flex justify-content-center mt-5"> <a
-                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">View portfolio<i
+                    class="Lbtn btn-lg btn-outline-warning rounded-pill" href="#!">VIEW MORE<i
                       class="fas fa-arrow-right ms-2"></i></a></div>
               </div>
             </div>
 
-            
-            </div>
+
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -662,7 +784,7 @@
           <div class="c03Box d-block d-lg-flex col-12 justify-content-between align-items-stretch overflow-hidden">
 
             <!-- 좌측 -->
-            <div class="box03 col-12 col-lg-5">
+            <div class="box03 col-12 col-lg-5 d-flex flex-column justify-content-between">
 
               <div class="box03Img"><img src="" alt=""></div>
 
@@ -687,7 +809,7 @@
 
                     <div>
                       <div class="F_tel">　연락처</div>
-                      <input type="tel" placeholder="010-0000-0000" name="phone" class="input">
+                      <input type="tel"  id="phone"  maxlength="13" placeholder="010-0000-0000" name="phone" class="input">
                     </div>
                   </div>
 
@@ -713,7 +835,7 @@
                     <button type="button" class="category-btn" data-category="plate">PLATE</button>
                     <button type="button" class="category-btn" data-category="mug">MUG</button>
                     <br class="d-xxl-none" />
-                    <button type="button" class="category-btn" data-category="incense">INCENSE</button>
+                    <button type="button" class="category-btn" data-category="mini-mug">MINI-MUG</button>
                     <button type="button" class="category-btn" data-category="life">LIFE</button>
                   </div>
 
@@ -724,25 +846,42 @@
                     <p class="pb-1">※ 당일 예약 취소 시에는 환불이 어려울 수 있습니다.</p>
                     <p class="pb-1">※ 모든 도자기 재료는 클래스에서 제공되므로, 별도로 구매하지 않으셔도 됩니다.</p>
                     <p class="pb-1">※ 재료에 대한 알레르기가 있는 경우 사전에 알려주시기 바랍니다.</p>
+                    <p class="pb-1">※ 기타 문의는 인스타그램 DM으로 부탁드립니다.</p>
                   </div>
                 </form>
               </div>
             </div> <!-- //폼박스 -->
-
-
           </div> <!-- //c03박스 -->
 
 
         </div>
       </div>
       </div><!-- //container-->
-
-
-
-
-
-
     </section>
+
+
+
+    <section>
+
+      <div class="c04 container">
+        <div class="row gx-3 ">
+          <h1 class="text-center lh-sm mb-5 fs-lg-6 fs-xxl-7">REVIEW</h1>
+
+          <div class="IMGslider d-flex" style="height: 500px;">
+            <img src="./assets/img/gallery/life/life_1.jpg" alt="">
+            <img src="./assets/img/gallery/life/life_2.jpg" alt="">
+            <img src="./assets/img/gallery/life/life_3.jpg" alt="">
+            <img src="./assets/img/gallery/life/life_4.jpg" alt="">
+            <img src="./assets/img/gallery/life/life_5.jpg" alt="">
+          </div>
+          </div>
+          </div>
+    </section>
+
+
+
+
+
     <!-- <section> close ============================-->
     <!-- ============================================-->
 
@@ -796,14 +935,28 @@
           <div class="footerSns col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="text-center">
               <a href="#" class="me-3 fs-3">
-                <svg aria-label="Instagram" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Instagram</title><path d="M12 2.982c2.937 0 3.285.011 4.445.064a6.087 6.087 0 0 1 2.042.379 3.408 3.408 0 0 1 1.265.823 3.408 3.408 0 0 1 .823 1.265 6.087 6.087 0 0 1 .379 2.042c.053 1.16.064 1.508.064 4.445s-.011 3.285-.064 4.445a6.087 6.087 0 0 1-.379 2.042 3.643 3.643 0 0 1-2.088 2.088 6.087 6.087 0 0 1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.087 6.087 0 0 1-2.043-.379 3.408 3.408 0 0 1-1.264-.823 3.408 3.408 0 0 1-.823-1.265 6.087 6.087 0 0 1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.087 6.087 0 0 1 .379-2.042 3.408 3.408 0 0 1 .823-1.265 3.408 3.408 0 0 1 1.265-.823 6.087 6.087 0 0 1 2.042-.379c1.16-.053 1.508-.064 4.445-.064M12 1c-2.987 0-3.362.013-4.535.066a8.074 8.074 0 0 0-2.67.511 5.392 5.392 0 0 0-1.949 1.27 5.392 5.392 0 0 0-1.269 1.948 8.074 8.074 0 0 0-.51 2.67C1.012 8.638 1 9.013 1 12s.013 3.362.066 4.535a8.074 8.074 0 0 0 .511 2.67 5.392 5.392 0 0 0 1.27 1.949 5.392 5.392 0 0 0 1.948 1.269 8.074 8.074 0 0 0 2.67.51C8.638 22.988 9.013 23 12 23s3.362-.013 4.535-.066a8.074 8.074 0 0 0 2.67-.511 5.625 5.625 0 0 0 3.218-3.218 8.074 8.074 0 0 0 .51-2.67C22.988 15.362 23 14.987 23 12s-.013-3.362-.066-4.535a8.074 8.074 0 0 0-.511-2.67 5.392 5.392 0 0 0-1.27-1.949 5.392 5.392 0 0 0-1.948-1.269 8.074 8.074 0 0 0-2.67-.51C15.362 1.012 14.987 1 12 1Zm0 5.351A5.649 5.649 0 1 0 17.649 12 5.649 5.649 0 0 0 12 6.351Zm0 9.316A3.667 3.667 0 1 1 15.667 12 3.667 3.667 0 0 1 12 15.667Zm5.872-10.859a1.32 1.32 0 1 0 1.32 1.32 1.32 1.32 0 0 0-1.32-1.32Z"></path></svg>
+                <svg aria-label="Instagram" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img"
+                  viewBox="0 0 24 24" width="24">
+                  <title>Instagram</title>
+                  <path
+                    d="M12 2.982c2.937 0 3.285.011 4.445.064a6.087 6.087 0 0 1 2.042.379 3.408 3.408 0 0 1 1.265.823 3.408 3.408 0 0 1 .823 1.265 6.087 6.087 0 0 1 .379 2.042c.053 1.16.064 1.508.064 4.445s-.011 3.285-.064 4.445a6.087 6.087 0 0 1-.379 2.042 3.643 3.643 0 0 1-2.088 2.088 6.087 6.087 0 0 1-2.042.379c-1.16.053-1.508.064-4.445.064s-3.285-.011-4.445-.064a6.087 6.087 0 0 1-2.043-.379 3.408 3.408 0 0 1-1.264-.823 3.408 3.408 0 0 1-.823-1.265 6.087 6.087 0 0 1-.379-2.042c-.053-1.16-.064-1.508-.064-4.445s.011-3.285.064-4.445a6.087 6.087 0 0 1 .379-2.042 3.408 3.408 0 0 1 .823-1.265 3.408 3.408 0 0 1 1.265-.823 6.087 6.087 0 0 1 2.042-.379c1.16-.053 1.508-.064 4.445-.064M12 1c-2.987 0-3.362.013-4.535.066a8.074 8.074 0 0 0-2.67.511 5.392 5.392 0 0 0-1.949 1.27 5.392 5.392 0 0 0-1.269 1.948 8.074 8.074 0 0 0-.51 2.67C1.012 8.638 1 9.013 1 12s.013 3.362.066 4.535a8.074 8.074 0 0 0 .511 2.67 5.392 5.392 0 0 0 1.27 1.949 5.392 5.392 0 0 0 1.948 1.269 8.074 8.074 0 0 0 2.67.51C8.638 22.988 9.013 23 12 23s3.362-.013 4.535-.066a8.074 8.074 0 0 0 2.67-.511 5.625 5.625 0 0 0 3.218-3.218 8.074 8.074 0 0 0 .51-2.67C22.988 15.362 23 14.987 23 12s-.013-3.362-.066-4.535a8.074 8.074 0 0 0-.511-2.67 5.392 5.392 0 0 0-1.27-1.949 5.392 5.392 0 0 0-1.948-1.269 8.074 8.074 0 0 0-2.67-.51C15.362 1.012 14.987 1 12 1Zm0 5.351A5.649 5.649 0 1 0 17.649 12 5.649 5.649 0 0 0 12 6.351Zm0 9.316A3.667 3.667 0 1 1 15.667 12 3.667 3.667 0 0 1 12 15.667Zm5.872-10.859a1.32 1.32 0 1 0 1.32 1.32 1.32 1.32 0 0 0-1.32-1.32Z">
+                  </path>
+                </svg>
               </a>
               <a href="#" class="me-3 fs-3">
-                <svg aria-label="" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 192 192" width="24"><title></title><path class="xcslo1z" d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path></svg>
+                <svg aria-label="" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img"
+                  viewBox="0 0 192 192" width="24">
+                  <title></title>
+                  <path class="xcslo1z"
+                    d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z">
+                  </path>
+                </svg>
               </a>
               <a href="#" class="me-3 fs-3">
-                <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" width="24" height="24">
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16"
+                  width="24" height="24">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
                 </svg>
               </a>
             </div>
@@ -846,13 +999,6 @@
   <script src="vendors/swiper/swiper-bundle.js"> </script>
   <script src="vendors/fontawesome/all.min.js"></script>
   <script src="assets/js/theme.js"></script>
-
-
-
-
-
-
-
 </body>
 
 </html>

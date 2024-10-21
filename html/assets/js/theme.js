@@ -434,6 +434,7 @@ function deepMerge() {
 function swiperInit() {
   swipers.forEach(function (swiper) {
     return new window.Swiper(swiper, deepMerge({
+      loop: true,
       pagination: {
         el: document.getElementById(swiper.dataset.paginationTarget),
         type: 'fraction',

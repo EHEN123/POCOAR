@@ -19,25 +19,6 @@ $(document).ready(function() {
 });
 
 
-// 커서 따라다니는 svg
-// let mouseX = 0;
-// let mouseY = 0;
-
-// document.addEventListener('mousemove', (e) => {
-//     mouseX = e.clientX;
-//     mouseY = e.clientY;
-// });
-
-// const updateCursor = () => {
-//     const scrollX = window.scrollX;
-//     const scrollY = window.scrollY;
-//     customCursor.style.transform = `translate(${mouseX + scrollX}px, ${mouseY + scrollY}px)`;
-// };
-
-// // 일정 간격으로 커서 위치를 업데이트
-// setInterval(updateCursor, 10);
-
-
 
 // 지도
 const mapContainer = document.getElementById('map'); 
@@ -66,3 +47,26 @@ categoryButtons.forEach(button => {
 });
 
 
+
+//번호 자동 -
+const phoneInput = document.getElementById('phone');
+
+phoneInput.addEventListener('input', function() {
+    // 숫자만 추출
+    let input = this.value.replace(/\D/g, '');
+
+    // 형식화
+    if (input.length > 3 && input.length <= 7) {
+        input = input.replace(/(\d{3})(\d{0,4})/, '$1-$2');
+    } else if (input.length > 7) {
+        input = input.replace(/(\d{3})(\d{4})(\d{0,4})/, '$1-$2-$3');
+    }
+
+    // 변경된 값 설정
+    this.value = input;
+});
+
+
+
+
+// 부드럽게 스크롤링하는 걸 넣고싶었으나.................
