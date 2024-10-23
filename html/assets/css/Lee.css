@@ -269,17 +269,27 @@
 }
 
 
-.IMGslider{
-  animation: roll 60s linear infinite;
-  animation-fill-mode: none;
+.review_wrap{
+  width: 100%;
+  overflow: visible;
 }
 
-@keyframes roll {
-  0% {
-      transform: translateX(0)
-  }
+.c04box{
+  overflow: visible;
+  max-width: calc(100% - var(--spacing) - var(--spacing));
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  to {
-      transform: translateX(-300%)
-  }
+.review_wrapper{
+  transition-duration: 5000ms;
+  transform: translate3d;
+}
+
+.review_slide{
+  width: 300px;
+}
+
+.review_slide img{
+  background: #aaa;
 }

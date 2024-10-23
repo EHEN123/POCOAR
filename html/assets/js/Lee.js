@@ -68,5 +68,4 @@ phoneInput.addEventListener('input', function() {
 
 
 
-
-// 부드럽게 스크롤링하는 걸 넣고싶었으나.................
+// review

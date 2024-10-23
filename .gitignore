@@ -43,5 +43,4 @@ node_modules
 temp
 
 # OTHER #
-/api/
-*.php
+/config/

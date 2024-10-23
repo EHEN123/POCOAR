@@ -1,0 +1,60 @@
+[33mcommit 956ccc0f0565fd8da6b0605fc80bb5467e2c4431[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 77d6554 3ab6971
+Author: EHEN123 <dlgpdms6424@gmail.com>
+Date:   Tue Oct 22 10:27:38 2024 +0900
+
+    [1.1.2] 폼, 반응형, db작업 추가
+
+[33mcommit 77d6554b865f52c305083fd5dbbb1e92c6862d81[m
+Author: EHEN123 <dlgpdms6424@gmail.com>
+Date:   Mon Oct 21 18:24:43 2024 +0900
+
+    [1.1.2] 반응형 추가 작업, 리뷰 섹션 추가
+
+[33mcommit 3ab697196d8f0172683420e432175a7702c08bd2[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Mon Oct 21 15:11:06 2024 +0900
+
+    Add files via upload
+
+[33mcommit 379fd6c07ebb130ce3d211194750acf6eccb98a9[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Thu Oct 17 13:07:40 2024 +0900
+
+    Add files via upload
+
+[33mcommit 47bcd67f2aae8507e323caff4ad72b8ddc5a5535[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Thu Oct 17 13:06:11 2024 +0900
+
+    Add files via upload
+
+[33mcommit 5ebc6f5084930b787f0b07facea3f0da91bd19e4[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Thu Oct 17 13:04:18 2024 +0900
+
+    Add files via upload
+
+[33mcommit fa7ed9044d0abb1844a18b2f18ae8e0bdd2d4ba7[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Thu Oct 17 13:01:41 2024 +0900
+
+    Add files via upload
+
+[33mcommit 3f5949da5bdf608cf205bee8d3092360a66ec943[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Thu Oct 17 13:00:25 2024 +0900
+
+    Add files via upload
+
+[33mcommit 28b072e35a77927d595826aa76441cbd10a61c49[m
+Author: LeeHE <141649268+EHEN123@users.noreply.github.com>
+Date:   Thu Oct 17 12:41:49 2024 +0900
+
+    Add files via upload
+
+[33mcommit 2be538f805fb260ce36113fa16a228bf13c99aa8[m
+Author: EHEN123 <dlgpdms6424@gmail.com>
+Date:   Thu Oct 17 10:08:26 2024 +0900
+
+    [1.0.1] 각 section, footer, 반응형 작업
