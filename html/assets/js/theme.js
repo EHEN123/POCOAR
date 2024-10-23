@@ -430,7 +430,7 @@ function deepMerge() {
 
 // console.log(swiper.dataset.option ? JSON.parse(swiper.dataset.option) : {});
 
-// 페이지네이션1(main)
+// 스와이퍼01(main)
 function swiperInit() {
   swipers.forEach(function (swiper) {
     return new window.Swiper(swiper, deepMerge({
@@ -470,6 +470,14 @@ function swiperInit() {
     }, swiper.dataset.option ? JSON.parse(swiper.dataset.option) : {}));
   });
 } 
+
+
+
+
+
+
+
+
 // /* -------------------------------------------------------------------------- */
 // /*                            Theme Initialization                            */
 // /* -------------------------------------------------------------------------- */

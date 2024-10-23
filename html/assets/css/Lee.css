@@ -172,6 +172,14 @@
       margin-top: 7.5rem !important;
   }
 }
+@media (max-width: 992px){
+  h5 {
+    font-size: 1rem !important;
+  }
+  p {
+    font-size: 0.8rem !important;
+  }
+}
 
 
 /* ============= c03 ============= */
@@ -234,6 +242,8 @@
   padding: 0 15px;
   margin-top: 5px;
   margin-bottom: 20px;
+  appearance: none;
+  color: #333;
 }
 
 .category-btn{
@@ -266,30 +276,10 @@
   .box03, map{
     height: 600px;
   }
+
+  .nav{
+    font-size: 0.85rem;
+  }
 }
 
 
-.review_wrap{
-  width: 100%;
-  overflow: visible;
-}
-
-.c04box{
-  overflow: visible;
-  max-width: calc(100% - var(--spacing) - var(--spacing));
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.review_wrapper{
-  transition-duration: 5000ms;
-  transform: translate3d;
-}
-
-.review_slide{
-  width: 300px;
-}
-
-.review_slide img{
-  background: #aaa;
-}

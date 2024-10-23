@@ -78,6 +78,7 @@
   align-items: center;
   text-decoration: none;
   z-index: 9;
+  transition: all 0.5s ease-in-out;
 }
 
 .topText {
@@ -124,6 +125,20 @@
 }
 .topBtn:hover::before {
   opacity: 1;
+}
+
+
+
+@media (max-width: 992px){
+  .fade-in {
+    opacity: 0;
+    visibility: hidden; /* 요소를 숨기되 공간은 차지하게 유지 */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 
