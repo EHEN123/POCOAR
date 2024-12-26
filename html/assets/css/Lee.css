@@ -283,3 +283,17 @@
 }
 
 
+.IMGslider{
+  animation: roll 60s linear infinite;
+  animation-fill-mode: none;
+}
+
+@keyframes roll {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(-300%)
+  }
+}

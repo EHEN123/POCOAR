@@ -1,0 +1,94 @@
+/* ============= 커스텀(custom) ============= */
+
+/* 폰트 */
+body{
+  font-family: 'Montserrat' !important;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUQjIg1_i6t8kCHKm459WxRxC7mw9c.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  color: #333;
+}
+
+.nav-item{
+  font-family: 'Montserrat' !important;
+}
+
+/* 버튼 */
+.Lbtn {
+color: #333 !important;
+background-color: #fff !important;
+border: 3px solid #333 !important; 
+transition: background 0.5s ease;
+font-weight: bold;
+}
+
+.Lbtn:hover {
+background-color: #333 !important;
+color: #fff !important;
+}
+
+
+/* 요소가 화면의 2/3 위치에 왔을 때 FadeIn하며 드러남 */
+.fadeIn {
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fadeIn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 호버 블러 */
+.blur-target {
+  transition: filter 0.5s ease;
+}
+.blur-target:hover {
+  filter: blur(5px);
+  transition: transform 1s;
+  transition: filter 0.5s;
+}
+
+
+
+
+
+/* ============= 커서(cursor) ============= */
+
+body {
+  cursor: url('https://raw.githubusercontent.com/EHEN123/boot5/954eb51965a5bdb23614679ab7c82235f42bafd0/cursor.svg'), auto; /* 기본 커서 */
+}
+
+a, button, .clickable, .nav-link {
+  cursor: url('https://raw.githubusercontent.com/EHEN123/boot5/954eb51965a5bdb23614679ab7c82235f42bafd0/cursor_hover.svg'), pointer !important;
+}
+
+.scroll_wrap:hover {
+  cursor:  url(https://raw.githubusercontent.com/EHEN123/boot5/379fd6c07ebb130ce3d211194750acf6eccb98a9/drag.svg) 50 50,auto;
+}
+
+.scroll_wrap.active:hover {
+  cursor: grab
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card{
+  background-color: transparent !important;
+}
